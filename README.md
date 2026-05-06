@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Denmark Sweden Faroe Islands Trip</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#00A0C6',
+            'brand-dark': '#007A99',
+            'brand-light': '#E6F7FB',
+            'brand-50': '#F0FAFC'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; width: 100%; overflow-x: hidden; }
+    body { font-family: 'Prompt', sans-serif; background: #fff; color: #1f2937; }
+    .hero-font { font-family: 'Playfair Display', serif; }
+    .tab-active { border-bottom: 3px solid #00A0C6; color: #00A0C6; font-weight: 600; }
+    .day-card { transition: all 0.3s ease; }
+    @media (hover: hover) { .day-card:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,160,198,0.15); } }
+    .fade-in { animation: fadeIn 0.4s ease-out; }
+    @keyframes fadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+
+    /* ── รูปภาพ responsive สมบูรณ์ ── */
+    .place-img {
+      display: block;
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 0.75rem;
+      background: #e5e7eb;
+    }
+    @media (min-width: 768px) {
+      .place-img { height: 280px; }
+    }
+
+    /* ── ป้องกัน overflow ── */
+    img { max-width: 100%; display: block; }
+    p, span, li { word-break: break-word; overflow-wrap: anywhere; }
+
+    /* ── Nav tab scroll ── */
+    nav .tab-wrap { display: flex; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+    nav .tab-wrap::-webkit-scrollbar { display: none; }
+  </style>
+</head>
+<body>
+<div id="app">
+
+  <!-- ── HERO ── -->
+  <header class="relative w-full bg-gradient-to-br from-brand to-brand-dark text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-10 pointer-events-none">
+      <svg viewBox="0 0 800 400" class="w-full h-full" preserveAspectRatio="xMidYMid slice">
+        <circle cx="650" cy="80" r="120" fill="white"/>
+        <circle cx="100" cy="350" r="80" fill="white"/>
+        <path d="M0,300 Q200,250 400,300 T800,280 V400 H0Z" fill="white" opacity="0.3"/>
+      </svg>
+    </div>
+    <div class="relative max-w-5xl mx-auto px-4 py-10 md:py-20 text-center">
+      <p class="text-xs md:text-sm tracking-widest uppercase opacity-80 mb-3">Bluefly Travel</p>
+      <h1 class="hero-font text-2xl sm:text-4xl md:text-6xl font-bold mb-4 leading-tight">Denmark (Faroe Islands) · Sweden</h1>
+      <p class="text-base md:text-xl opacity-90 mb-1">10 วัน 7 คืน</p>
+      <p class="text-sm md:text-lg opacity-80">1 – 10 ตุลาคม 2569</p>
+      <div class="flex flex-wrap justify-center gap-3 mt-6">
+        <span class="bg-white/20 backdrop-blur px-3 py-1.5 rounded-full text-xs sm:text-sm flex items-center gap-2">
+          <i data-lucide="plane" class="w-4 h-4 shrink-0"></i>Thai Airways &amp; Scandinavian Airlines
+        </span>
+        <span class="bg-white/20 backdrop-blur px-3 py-1.5 rounded-full text-xs sm:text-sm flex items-center gap-2">
+          <i data-lucide="map-pin" class="w-4 h-4 shrink-0"></i>3 ประเทศ
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── TABS ── -->
+  <nav class="sticky top-0 z-50 bg-white border-b shadow-sm">
+    <div class="max-w-5xl mx-auto px-2 tab-wrap">
+      <button onclick="showSection('flights')" id="tab-flights" class="tab-active px-4 py-3 text-sm sm:text-base whitespace-nowrap shrink-0">เที่ยวบิน</button>
+      <button onclick="showSection('itinerary')" id="tab-itinerary" class="px-4 py-3 text-sm sm:text-base whitespace-nowrap text-gray-500 hover:text-brand shrink-0">โปรแกรมทัวร์</button>
+      <button onclick="showSection('country')" id="tab-country" class="px-4 py-3 text-sm sm:text-base whitespace-nowrap text-gray-500 hover:text-brand shrink-0">ข้อมูลประเทศ</button>
+      <button onclick="showSection('weather')" id="tab-weather" class="px-4 py-3 text-sm sm:text-base whitespace-nowrap text-gray-500 hover:text-brand shrink-0">สภาพอากาศ</button>
+    </div>
+  </nav>
+
+  <!-- ── CONTENT ── -->
+  <main class="max-w-5xl mx-auto px-3 sm:px-4 md:px-6">
+
+    <!-- ════ FLIGHTS ════ -->
+    <section id="sec-flights" class="fade-in py-6 sm:py-8">
+      <h2 class="text-xl sm:text-2xl font-bold text-brand-dark mb-5">ตารางเที่ยวบิน</h2>
+      <div class="space-y-3 sm:space-y-4">
+
+        <!-- Flight card template -->
+        <div class="bg-white rounded-2xl border border-brand/20 p-4 sm:p-5 shadow-sm">
+          <div class="flex items-center justify-between flex-wrap gap-2 mb-3">
+            <span class="bg-brand/10 text-brand font-semibold px-3 py-1 rounded-full text-xs sm:text-sm">2 ต.ค. 2569</span>
+            <span class="text-xs text-gray-500">Thai Airways TG950</span>
+          </div>
+          <div class="flex items-center gap-2 sm:gap-4">
+            <div class="text-center min-w-[52px]">
+              <p class="text-lg sm:text-xl font-bold">00.50</p>
+              <p class="text-xs text-gray-500">BKK</p>
+            </div>
+            <div class="flex-1 flex flex-col items-center gap-1">
+              <div class="w-full flex items-center">
+                <div class="h-px bg-brand/30 flex-1"></div>
+                <i data-lucide="plane" class="w-4 h-4 sm:w-5 sm:h-5 text-brand mx-2 shrink-0"></i>
+                <div class="h-px bg-brand/30 flex-1"></div>
+              </div>
+              <span class="text-xs text-brand font-medium">⏱ 11 ชม. 50 นาที</span>
+            </div>
+            <div class="text-center min-w-[52px]">
+              <p class="text-lg sm:text-xl font-bold">07.40</p>
+              <p class="text-xs text-gray-500">CPH</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-brand/20 p-4 sm:p-5 shadow-sm">
+          <div class="flex items-center justify-between flex-wrap gap-2 mb-3">
+            <span class="bg-brand/10 text-brand font-semibold px-3 py-1 rounded-full text-xs sm:text-sm">2 ต.ค. 2569</span>
+            <span class="text-xs text-gray-500">SAS SK1777</span>
+          </div>
+          <div class="flex items-center gap-2 sm:gap-4">
+            <div class="text-center min-w-[52px]">
+              <p class="text-lg sm:text-xl font-bold">11.30</p>
+              <p class="text-xs text-gray-500">CPH</p>
+            </div>
+            <div class="flex-1 flex flex-col items-center gap-1">
+              <div class="w-full flex items-center">
+                <div class="h-px bg-brand/30 flex-1"></div>
+                <i data-lucide="plane" class="w-4 h-4 sm:w-5 sm:h-5 text-brand mx-2 shrink-0"></i>
+                <div class="h-px bg-brand/30 flex-1"></div>
+              </div>
+              <span class="text-xs text-brand font-medium">⏱ 2 ชม. 10 นาที</span>
+            </div>
+            <div class="text-center min-w-[52px]">
+              <p class="text-lg sm:text-xl font-bold">12.40</p>
+              <p class="text-xs text-gray-500">FAE</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-brand/20 p-4 sm:p-5 shadow-sm">
+          <div class="flex items-center justify-between flex-wrap gap-2 mb-3">
+            <span class="bg-brand/10 text-brand font-semibold px-3 py-1 rounded-full text-xs sm:text-sm">6 ต.ค. 2569</span>
+            <span class="text-xs text-gray-500">SAS SK1778</span>
+          </div>
+          <div class="flex items-center gap-2 sm:gap-4">
+            <div class="text-center min-w-[52px]">
+              <p class="text-lg sm:text-xl font-bold">13.25</p>
+              <p class="text-xs text-gray-500">FAE</p>
+            </div>
+            <div class="flex-1 flex flex-col items-center gap-1">
+              <div class="w-full flex items-center">
+                <div class="h-px bg-brand/30 flex-1"></div>
+                <i data-lucide="plane" class="w-4 h-4 sm:w-5 sm:h-5 text-brand mx-2 shrink-0"></i>
+                <div class="h-px bg-brand/30 flex-1"></div>
+              </div>
+              <span class="text-xs text-brand font-medium">⏱ 2 ชม. 10 นาที</span>
+            </div>
+            <div class="text-center min-w-[52px]">
+              <p class="text-lg sm:text-xl font-bold">16.35</p>
+              <p class="text-xs text-gray-500">CPH</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-brand/20 p-4 sm:p-5 shadow-sm">
+          <div class="flex items-center justify-between flex-wrap gap-2 mb-3">
+            <span class="bg-brand/10 text-brand font-semibold px-3 py-1 rounded-full text-xs sm:text-sm">6 ต.ค. 2569</span>
+            <span class="text-xs text-gray-500">SAS SK1444</span>
+          </div>
+          <div class="flex items-center gap-2 sm:gap-4">
+            <div class="text-center min-w-[52px]">
+              <p class="text-lg sm:text-xl font-bold">19.15</p>
+              <p class="text-xs text-gray-500">CPH</p>
+            </div>
+            <div class="flex-1 flex flex-col items-center gap-1">
+              <div class="w-full flex items-center">
+                <div class="h-px bg-brand/30 flex-1"></div>
+                <i data-lucide="plane" class="w-4 h-4 sm:w-5 sm:h-5 text-brand mx-2 shrink-0"></i>
+                <div class="h-px bg-brand/30 flex-1"></div>
+              </div>
+              <span class="text-xs text-brand font-medium">⏱ 50 นาที</span>
+            </div>
+            <div class="text-center min-w-[52px]">
+              <p class="text-lg sm:text-xl font-bold">20.05</p>
+              <p class="text-xs text-gray-500">GOT</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-brand/20 p-4 sm:p-5 shadow-sm">
+          <div class="flex items-center justify-between flex-wrap gap-2 mb-3">
+            <span class="bg-brand/10 text-brand font-semibold px-3 py-1 rounded-full text-xs sm:text-sm">9 ต.ค. 2569</span>
+            <span class="text-xs text-gray-500">Thai Airways TG951</span>
+          </div>
+          <div class="flex items-center gap-2 sm:gap-4">
+            <div class="text-center min-w-[52px]">
+              <p class="text-lg sm:text-xl font-bold">14.25</p>
+              <p class="text-xs text-gray-500">CPH</p>
+            </div>
+            <div class="flex-1 flex flex-col items-center gap-1">
+              <div class="w-full flex items-center">
+                <div class="h-px bg-brand/30 flex-1"></div>
+                <i data-lucide="plane" class="w-4 h-4 sm:w-5 sm:h-5 text-brand mx-2 shrink-0"></i>
+                <div class="h-px bg-brand/30 flex-1"></div>
+              </div>
+              <span class="text-xs text-brand font-medium">⏱ 10 ชม. 35 นาที</span>
+            </div>
+            <div class="text-center min-w-[52px]">
+              <p class="text-lg sm:text-xl font-bold">06.00<span class="text-sm">+1</span></p>
+              <p class="text-xs text-gray-500">BKK</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════ ITINERARY ════ -->
+    <section id="sec-itinerary" class="hidden fade-in py-6 sm:py-8">
+      <div class="space-y-5">
+
+        <!-- Day 1 -->
+        <div class="day-card bg-brand-50 rounded-2xl p-4 sm:p-6 border border-brand/10">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="bg-brand text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm shrink-0">1</span>
+            <div>
+              <h3 class="font-semibold text-base sm:text-lg text-brand-dark">วันพฤหัสบดีที่ 1 ตุลาคม 2569</h3>
+              <p class="text-xs sm:text-sm text-gray-500">กรุงเทพฯ → สนามบินสุวรรณภูมิ</p>
+            </div>
+          </div>
+          <div class="space-y-3 border-l-2 border-brand/20 pl-4 ml-1 text-sm">
+            <p><span class="font-semibold text-brand">20:30 น.</span> — พบกันที่ สนามบินสุวรรณภูมิ อาคารผู้โดยสารขาออกระหว่างประเทศ ชั้น 4 ประตู 4 เคาน์เตอร์ H สายการบิน Thai Airways</p>
+          </div>
+          <div class="mt-4 bg-white/70 rounded-xl p-3 text-xs text-gray-500 flex items-start gap-2">
+            <span class="shrink-0">💡</span>แนะนำเดินทางมาถึงสนามบินก่อนเวลานัดหมายอย่างน้อย 30 นาที
+          </div>
+        </div>
+
+        <!-- Day 2 -->
+        <div class="day-card bg-brand-50 rounded-2xl p-4 sm:p-6 border border-brand/10">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="bg-brand text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm shrink-0">2</span>
+            <div>
+              <h3 class="font-semibold text-base sm:text-lg text-brand-dark">วันศุกร์ที่ 2 ตุลาคม 2569</h3>
+              <p class="text-xs sm:text-sm text-gray-500">กรุงเทพฯ → โคเปนเฮเกน → หมู่เกาะแฟโร</p>
+            </div>
+          </div>
+          <div class="space-y-4 text-sm">
+            <div class="flex items-start gap-2"><i data-lucide="plane" class="w-4 h-4 text-brand mt-0.5 shrink-0"></i><p><strong>00.50 น.</strong> ออกเดินทางสู่โคเปนเฮเกน โดย Thai Airwaysys เที่ยวบินที่ TG950 </p></div>
+            <div class="flex items-start gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-brand mt-0.5 shrink-0"></i><p><strong>07.40 น.</strong> เดินทางถึง สนามบินโคเปนเฮเกน แวะเปลี่ยนเครื่อง</p></div>
+            <div class="flex items-start gap-2"><i data-lucide="plane" class="w-4 h-4 text-brand mt-0.5 shrink-0"></i><p><strong>11.30 น.</strong> ออกเดินทางสู่สนามบินวาการ์ โดย Scandinavian Airlines เที่ยวบินที่ SK1777 </p></div>
+            <div class="flex items-start gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-brand mt-0.5 shrink-0"></i><p><strong>12.40 น.</strong> ถึงสนามบินวาการ์ หมู่เกาะแฟโร</p></div>
+
+            <div class="pt-1">
+              <p class="font-semibold mb-1">📸 หมู่บ้านเคิร์กจูบูเออร์ (Kirkjubøur)</p>
+              <p class="text-gray-600 text-sm mb-2">หมู่บ้านที่อยู่ทางตอนใต้ของเกาะ Streymoy เป็นที่ตั้งของโบสถ์หินโบราณแมกนาส (Magnus Cathedral) ที่ถูกสร้างขึ้นตั้งแต่สมัยชาวไวกิ้งในยุคกลาง</p>
+              <img src="https://vilholdt.dk/wp-content/uploads/2025/01/Kirkjubour-faeroeerne-Hestur-kirke-oversigt.webp" loading="lazy" class="place-img" alt="Kirkjubøur">
+            </div>
+            <div>
+              <p class="font-semibold mb-1">🏘️ เมืองทอร์สเฮาน์ (Tórshavn)</p>
+              <p class="text-gray-600 text-sm mb-2">เมืองหลวงและเมืองที่ใหญ่ที่สุดของหมู่เกาะแฟโร (ใช้เวลาเดินทางประมาณ 15 นาที)</p>
+              <img src="https://static.independent.co.uk/2021/09/22/16/iStock-1208766264.jpg" loading="lazy" class="place-img" alt="Tórshavn">
+            </div>
+            <div>
+              <p class="font-semibold mb-1">🏰 ย่านเมืองเก่าทินเกนส์ (Tinganes)</p>
+              <p class="text-gray-600 text-sm mb-2">สถานที่ตั้งของรัฐสภาที่เก่าแก่ที่สุดในโลก มีอาคารบ้านเรือนสีแดงเป็นเอกลักษณ์</p>
+              <img src="https://juliahammond.blog/wp-content/uploads/2018/05/tinganes.jpg" loading="lazy" class="place-img" alt="Tinganes">
+            </div>
+
+            <div class="flex items-center gap-2 text-gray-600 pt-1"><i data-lucide="utensils" class="w-4 h-4 text-brand shrink-0"></i><span>อาหารค่ำ ณ ภัตตาคาร</span></div>
+            <div class="flex items-center gap-2 text-gray-600"><i data-lucide="bed" class="w-4 h-4 text-brand shrink-0"></i><span>Hotel Brandan หรือเทียบเท่า ★★★★</span></div>
+          </div>
+        </div>
+
+        <!-- Day 3 -->
+        <div class="day-card bg-brand-50 rounded-2xl p-4 sm:p-6 border border-brand/10">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="bg-brand text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm shrink-0">3</span>
+            <div>
+              <h3 class="font-semibold text-base sm:text-lg text-brand-dark">วันเสาร์ที่ 3 ตุลาคม 2569</h3>
+              <p class="text-xs sm:text-sm text-gray-500">Bøur · Rib Boat · Múlafossur Waterfall</p>
+            </div>
+          </div>
+          <div class="space-y-4 text-sm">
+            <div>
+              <p class="font-semibold mb-1">🏡 เมืองเบอร์ (Bøur)</p>
+              <p class="text-gray-600 mb-2">หมู่บ้านเล็กๆ ที่เก่าแก่และสวยงามบนเกาะ Vágar มีวิวทิวทัศน์เหมือนหลุดออกมาจากไปรษณียบัตร (ใช้เวลาเดินทางประมาณ 50 นาที)</p>
+              <img src="https://live.staticflickr.com/1893/42759353420_6c96a2f88b_b.jpg" loading="lazy" class="place-img" alt="Bøur">
+            </div>
+            <div>
+              <p class="font-semibold mb-1">🚤 Rib Boat (Rigid Inflatable Boat)</p>
+              <p class="text-gray-600 mb-2">นั่งเรือ RIB BOAT ลัดเลาะผ่านฟยอร์ดต่างๆ ชมเกาะทินด์โฮลเมอร์ (Tindhólmur) และโขดหินดรังงาเนียร์ (Drangarnir)</p>
+              <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/30/03/1b/33/caption.jpg?w=500&h=400&s=1" loading="lazy" class="place-img" alt="RIB Boat">
+            </div>
+            <div>
+              <p class="font-semibold mb-1">🐟 Salmon Rings</p>
+              <p class="text-gray-600 mb-2">ชมฟาร์มแซลมอนกลางมหาสมุทรแอตแลนติกเหนือ ใช้กระชังเลี้ยงปลาขนาดใหญ่ในทะเลเปิด</p>
+              <img src="https://www.nordforsk.org/sites/default/files/styles/featured/public/2023-06/Foto%20Bakkafrost.png?h=3b2e7b44&itok=tGyIfiNu" loading="lazy" class="place-img" alt="Salmon Farm">
+            </div>
+            <div class="flex items-center gap-2 text-gray-600"><i data-lucide="utensils" class="w-4 h-4 text-brand shrink-0"></i><span>อาหารกลางวัน ณ ฟาร์มแซลมอน</span></div>
+            <div>
+              <p class="font-semibold mb-1">💧 น้ำตกมูลาฟอสซูร์ (Múlafossur Waterfall)</p>
+              <p class="text-gray-600 mb-2">น้ำตกสูง 30-60 เมตร ไหลจากหน้าผาสีเขียวชอุ่มลงสู่มหาสมุทรแอตแลนติกโดยตรง หนึ่งในแลนด์มาร์กสำคัญที่สุดของหมู่เกาะแฟโร</p>
+              <img src="https://scontent.fbkk12-5.fna.fbcdn.net/v/t1.6435-9/167403285_281953920066110_671285567205137036_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=7b2446&_nc_ohc=PLvh_SfsKnEQ7kNvwFM8gBN&_nc_oc=AdqJsArUA3iHhvv1tQvLgMuMT34CGYOvEE-AMDaXz8QB4Un8gn7F4zeiy7n54ifykbKcm1fNaidhOerrhvN4pvIb&_nc_zt=23&_nc_ht=scontent.fbkk12-5.fna&_nc_gid=yiPsbH2dPoCU8SLBLr0F5Q&_nc_ss=7b2a8&oh=00_Af4h5yFliUMFYzDb7hgDloCVGtM0W3pdycNUoHUYd5txDQ&oe=6A22554C" loading="lazy" class="place-img" alt="Múlafossur Waterfall">
+            </div>
+            <div class="flex items-center gap-2 text-gray-600 pt-1"><i data-lucide="utensils" class="w-4 h-4 text-brand shrink-0"></i><span>อาหารค่ำ ณ ภัตตาคาร</span></div>
+            <div class="flex items-center gap-2 text-gray-600"><i data-lucide="bed" class="w-4 h-4 text-brand shrink-0"></i><span>Hotel Brandan หรือเทียบเท่า ★★★★</span></div>
+          </div>
+        </div>
+
+        <!-- Day 4 -->
+        <div class="day-card bg-brand-50 rounded-2xl p-4 sm:p-6 border border-brand/10">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="bg-brand text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm shrink-0">4</span>
+            <div>
+              <h3 class="font-semibold text-base sm:text-lg text-brand-dark">วันอาทิตย์ที่ 4 ตุลาคม 2569</h3>
+              <p class="text-xs sm:text-sm text-gray-500">Saksun · Fossa Waterfall · Gjógv</p>
+            </div>
+          </div>
+          <div class="space-y-4 text-sm">
+            <div>
+              <p class="font-semibold mb-1">🏔️ Saksun</p>
+              <p class="text-gray-600 mb-2">หมู่บ้านเล็กๆ ทางตอนเหนือของเกาะ Streymoy ทัศนียภาพเหมือนหลุดออกมาจากเทพนิยาย</p>
+              <img src="https://www.got2globe.com/wp-content/uploads/2022/07/Saksun-Duvugardar-streymoy-ilhas-faroe.jpg.webp" loading="lazy" class="place-img" alt="Saksun">
+            </div>
+            <div>
+              <p class="font-semibold mb-1">💧 น้ำตกฟอสซอ (Fossa Waterfall)</p>
+              <p class="text-gray-600 mb-2">น้ำตกที่สูงที่สุดในหมู่เกาะแฟโร สูงรวมประมาณ 140 เมตร แบ่งเป็น 2 ชั้น (ใช้เวลาเดินทางประมาณ 25 นาที)</p>
+              <img src="https://w0.peakpx.com/wallpaper/65/601/HD-wallpaper-fossa-waterfalls-faroe-islands-island-cliffs-waterfall-nature.jpg" loading="lazy" class="place-img" alt="Fossa Waterfall">
+            </div>
+            <div>
+              <p class="font-semibold mb-1">🌅 หมู่บ้าน Tjørnuvík</p>
+              <p class="text-gray-600 mb-2">หมู่บ้านเก่าแก่ทางตอนเหนือสุดของเกาะ Streymoy มีชายหาดทรายสีดำที่สวยงามและบรรยากาศเงียบสงบ</p>
+              <img src="https://guidetofaroeislands.fo/wp-content/uploads/2021/06/Tjornuvik1-e1623618312132.jpg" loading="lazy" class="place-img" alt="Tjørnuvík">
+            </div>
+            <div class="flex items-center gap-2 text-gray-600"><i data-lucide="utensils" class="w-4 h-4 text-brand shrink-0"></i><span>อาหารกลางวัน ณ ภัตตาคาร</span></div>
+            <div>
+              <p class="font-semibold mb-1">🌿 หมู่บ้าน Gjógv</p>
+              <p class="text-gray-600 mb-2">หมู่บ้านปลายสุดตะวันออกเฉียงเหนือของเกาะ Eysturoy มีโตรกผายาวกว่า 200 เมตร ที่ทำหน้าที่เป็นท่าเรือธรรมชาติมานานหลายศตวรรษ</p>
+              <img src="https://www.meganstarr.com/wp-content/uploads/2022/03/shutterstock_1671681490.jpg" loading="lazy" class="place-img" alt="Gjógv">
+            </div>
+            <div>
+              <p class="font-semibold mb-1">⛰️ หมู่บ้าน Funningur</p>
+              <p class="text-gray-600 mb-2">จุดแรกที่ชาวไวกิ้ง Grímur Kamban เดินทางมาถึงและตั้งรกรากในปี ค.ศ. 825 ล้อมรอบด้วยภูเขาสูงและฟยอร์ดลึก</p>
+              <img src="https://preview.redd.it/funningur-faroe-islands-v0-j2uvs2pt7lhe1.jpeg?width=640&crop=smart&auto=webp&s=6c925e498309986284e3eb6c3eaa620e0253f087" loading="lazy" class="place-img" alt="Funningur">
+            </div>
+            <div class="flex items-center gap-2 text-gray-600 pt-1"><i data-lucide="utensils" class="w-4 h-4 text-brand shrink-0"></i><span>อาหารค่ำ ณ ภัตตาคาร</span></div>
+            <div class="flex items-center gap-2 text-gray-600"><i data-lucide="bed" class="w-4 h-4 text-brand shrink-0"></i><span>Hotel Brandan หรือเทียบเท่า ★★★★</span></div>
+          </div>
+        </div>
+
+        <!-- Day 5 -->
+        <div class="day-card bg-brand-50 rounded-2xl p-4 sm:p-6 border border-brand/10">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="bg-brand text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm shrink-0">5</span>
+            <div>
+              <h3 class="font-semibold text-base sm:text-lg text-brand-dark">วันจันทร์ที่ 5 ตุลาคม 2569</h3>
+              <p class="text-xs sm:text-sm text-gray-500">หมู่เกาะแฟโร → โคเปนเฮเกน → กอเทนเบิร์ก</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <div class="flex items-start gap-2"><i data-lucide="plane" class="w-4 h-4 text-brand mt-0.5 shrink-0"></i><p><strong>13.25 น.</strong> ออกเดินทางสู่โคเปนเฮเกน โดย SAS (SK1778)</p></div>
+            <div class="flex items-start gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-brand mt-0.5 shrink-0"></i><p><strong>16.35 น.</strong> เดินทางถึงสนามบินโคเปนเฮเกน แวะเปลี่ยนเครื่อง</p></div>
+            <div class="flex items-start gap-2"><i data-lucide="plane" class="w-4 h-4 text-brand mt-0.5 shrink-0"></i><p><strong>19.15 น.</strong> ออกเดินทางสู่กอเทนเบิร์ก โดย SAS (SK1444)</p></div>
+            <div class="flex items-start gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-brand mt-0.5 shrink-0"></i><p><strong>20.05 น.</strong> เดินทางถึงสนามบินกอเทนเบิร์ก แลนด์เวทเตอร์</p></div>
+            <div class="flex items-center gap-2 pt-1 text-gray-600"><i data-lucide="bed" class="w-4 h-4 text-brand shrink-0"></i><span>Gothia Towers หรือเทียบเท่า ★★★★</span></div>
+          </div>
+        </div>
+
+        <!-- Day 6 -->
+        <div class="day-card bg-brand-50 rounded-2xl p-4 sm:p-6 border border-brand/10">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="bg-brand text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm shrink-0">6</span>
+            <div>
+              <h3 class="font-semibold text-base sm:text-lg text-brand-dark">วันอังคารที่ 6 ตุลาคม 2569</h3>
+              <p class="text-xs sm:text-sm text-gray-500">กอเทนเบิร์ก · Euro Spine 2026</p>
+            </div>
+          </div>
+          <div class="space-y-3 text-sm">
+            <div class="bg-white rounded-xl p-4 border border-brand/20">
+              <div class="flex items-center gap-2 mb-3"><span class="text-2xl">🏥</span><p class="font-medium">เข้าร่วมงาน Euro Spine 2026 (ทั้งวัน)</p></div>
+              <img src="https://media.licdn.com/dms/image/v2/D4E1BAQGCuCN7REFeZw/company-background_10000/B4EZrAcvcCHMAU-/0/1764165351609/eurospinesoc_cover?e=2147483647&v=beta&t=fbEM27tEdHTSgyhxUO3N-58imNBQcexygYl8nc_zmK4" loading="lazy" class="place-img" alt="Euro Spine 2026">
+            </div>
+            <div class="flex items-center gap-2 text-gray-600"><i data-lucide="utensils" class="w-4 h-4 text-brand shrink-0"></i><span>อาหารค่ำ ณ ภัตตาคาร</span></div>
+            <div class="flex items-center gap-2 text-gray-600"><i data-lucide="bed" class="w-4 h-4 text-brand shrink-0"></i><span>Gothia Towers หรือเทียบเท่า ★★★★</span></div>
+          </div>
+        </div>
+
+        <!-- Day 7 -->
+        <div class="day-card bg-brand-50 rounded-2xl p-4 sm:p-6 border border-brand/10">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="bg-brand text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm shrink-0">7</span>
+            <div>
+              <h3 class="font-semibold text-base sm:text-lg text-brand-dark">วันพุธที่ 7 ตุลาคม 2569</h3>
+              <p class="text-xs sm:text-sm text-gray-500">กอเทนเบิร์ก · Euro Spine 2026 → โคเปนเฮเกน</p>
+            </div>
+          </div>
+          <div class="space-y-3 text-sm">
+            <div class="bg-white rounded-xl p-4 border border-brand/20">
+              <div class="flex items-center gap-2 mb-3"><span class="text-2xl">🏥</span><p class="font-medium">เข้าร่วมงาน Euro Spine 2026 </p></div>
+              <img src="https://www.eurospine.org/fileadmin/Events/Annual_Meeting/2025/Scientific_Programme/ES_2025_0327_RH6_4751_Large.jpeg" loading="lazy" class="place-img" alt="Euro Spine 2026">
+            </div>
+            <div class="flex items-center gap-2 text-gray-600"><i data-lucide="utensils" class="w-4 h-4 text-brand shrink-0"></i><span>อาหารกลางวัน ณ ภัตตาคาร</span></div>
+            <div class="flex items-start gap-2 text-gray-700">
+              <i data-lucide="car" class="w-4 h-4 text-brand mt-0.5 shrink-0"></i>
+              <p>เดินทางสู่เมืองโคเปนเฮเกน นครหลวงที่ใหญ่ที่สุดของกลุ่มประเทศสแกนดิเนเวีย (ใช้เวลาเดินทางประมาณ 3 ชั่วโมง 30 นาที)</p>
+            </div>
+            <div class="flex items-center gap-2 text-gray-600"><i data-lucide="utensils" class="w-4 h-4 text-brand shrink-0"></i><span>อาหารค่ำ ณ ภัตตาคาร</span></div>
+            <div class="flex items-center gap-2 text-gray-600"><i data-lucide="bed" class="w-4 h-4 text-brand shrink-0"></i><span>Radisson Blu Scandinavia Hotel หรือเทียบเท่า ★★★★</span></div>
+          </div>
+        </div>
+
+        <!-- Day 8 -->
+        <div class="day-card bg-brand-50 rounded-2xl p-4 sm:p-6 border border-brand/10">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="bg-brand text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm shrink-0">8</span>
+            <div>
+              <h3 class="font-semibold text-base sm:text-lg text-brand-dark">วันพฤหัสบดีที่ 8 ตุลาคม 2569</h3>
+              <p class="text-xs sm:text-sm text-gray-500">โคเปนเฮเกน → กรุงเทพฯ</p>
+            </div>
+          </div>
+          <div class="space-y-3 text-sm">
+            <div class="flex items-start gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-brand mt-0.5 shrink-0"></i><p>เดินทางสู่ สนามบินโคเปนเฮเกน </p></div>
+            <div class="flex items-start gap-2"><i data-lucide="plane" class="w-4 h-4 text-brand mt-0.5 shrink-0"></i><p><strong>14.25 น.</strong> ออกเดินทางสู่กรุงเทพฯ โดย Thai Airways (TG951)</p></div>
+          </div>
+        </div>
+
+        <!-- Day 9 -->
+        <div class="day-card bg-brand-50 rounded-2xl p-4 sm:p-6 border border-brand/10">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="bg-brand text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm shrink-0">9</span>
+            <div>
+              <h3 class="font-semibold text-base sm:text-lg text-brand-dark">วันศุกร์ที่ 9 ตุลาคม 2569</h3>
+              <p class="text-xs sm:text-sm text-gray-500">เดินทางถึงกรุงเทพฯ</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <div class="flex items-start gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-brand mt-0.5 shrink-0"></i><p><strong>06.00 น.</strong> เดินทางถึงกรุงเทพฯ โดยสวัสดิภาพ 🇹🇭</p></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════ COUNTRY ════ -->
+    <section id="sec-country" class="hidden fade-in py-6 sm:py-8">
+      <h2 class="text-xl sm:text-2xl font-bold text-brand-dark mb-5">ข้อมูลประเทศ</h2>
+      <div class="space-y-4">
+        <div class="bg-white rounded-2xl border border-brand/20 p-4 sm:p-6 shadow-sm">
+          <div class="flex items-center gap-3 mb-4"><span class="text-3xl">🇫🇴</span><h3 class="text-lg sm:text-xl font-bold text-brand-dark">หมู่เกาะแฟโร (Faroe Islands)</h3></div>
+          <div class="grid sm:grid-cols-2 gap-3 text-sm">
+            <div class="space-y-1.5">
+              <p><strong>เมืองหลวง:</strong> ทอร์สเฮาน์ (Tórshavn)</p>
+              <p><strong>สถานะ:</strong> ดินแดนปกครองตนเองของเดนมาร์ก</p>
+              <p><strong>ภาษา:</strong> แฟโร, เดนิช</p>
+              <p><strong>สกุลเงิน:</strong> โครนเดนมาร์ก (DKK) ≈ 5 บาท/โครน</p>
+              <p><strong>ประชากร:</strong> ~54,000 คน</p>
+              <p><strong>เวลา:</strong> GMT+0 (ช้ากว่าไทย 7 ชม.)</p>
+            </div>
+            <div class="space-y-1.5">
+              <p><strong>พื้นที่:</strong> 1,399 ตร.กม. (18 เกาะ)</p>
+              <p><strong>ไฟฟ้า:</strong> 230V ปลั๊กแบบ C/E/F/K</p>
+              <p><strong>วีซ่า:</strong> ไม่ต้องขอวีซ่า (อยู่ไม่เกิน 90 วัน)</p>
+              <p><strong>อาหาร:</strong> ปลาสด, เนื้อแกะ, Skerpikjøt (เนื้อตากแห้ง)</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl border border-brand/20 p-4 sm:p-6 shadow-sm">
+          <div class="flex items-center gap-3 mb-4"><span class="text-3xl">🇩🇰</span><h3 class="text-lg sm:text-xl font-bold text-brand-dark">เดนมาร์ก (Denmark)</h3></div>
+          <div class="grid sm:grid-cols-2 gap-3 text-sm">
+            <div class="space-y-1.5">
+              <p><strong>เมืองหลวง:</strong> โคเปนเฮเกน (Copenhagen)</p>
+              <p><strong>ภาษา:</strong> เดนิช</p>
+              <p><strong>สกุลเงิน:</strong> โครนเดนมาร์ก (DKK)</p>
+              <p><strong>ประชากร:</strong> ~5.9 ล้านคน</p>
+              <p><strong>เวลา:</strong> GMT+2 (ช้ากว่าไทย 5 ชม.)</p>
+            </div>
+            <div class="space-y-1.5">
+              <p><strong>ไฟฟ้า:</strong> 230V ปลั๊กแบบ C/E/F/K</p>
+              <p><strong>วีซ่า:</strong> ต้องขอวีซ่าเชงเก้น</p>
+              <p><strong>สิ่งที่น่าสนใจ:</strong> Nyhavn, Tivoli Gardens, Little Mermaid</p>
+              <p><strong>อาหาร:</strong> Smørrebrød, Danish Pastry</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl border border-brand/20 p-4 sm:p-6 shadow-sm">
+          <div class="flex items-center gap-3 mb-4"><span class="text-3xl">🇸🇪</span><h3 class="text-lg sm:text-xl font-bold text-brand-dark">สวีเดน (Sweden)</h3></div>
+          <div class="grid sm:grid-cols-2 gap-3 text-sm">
+            <div class="space-y-1.5">
+              <p><strong>เมืองหลวง:</strong> สตอกโฮล์ม (Stockholm)</p>
+              <p><strong>เมืองที่เยือน:</strong> กอเทนเบิร์ก (Gothenburg)</p>
+              <p><strong>ภาษา:</strong> สวีดิช</p>
+              <p><strong>สกุลเงิน:</strong> โครนสวีเดน (SEK) ≈ 3.2 บาท/โครน</p>
+              <p><strong>เวลา:</strong> GMT+2 (ช้ากว่าไทย 5 ชม.)</p>
+            </div>
+            <div class="space-y-1.5">
+              <p><strong>ไฟฟ้า:</strong> 230V ปลั๊กแบบ C/F</p>
+              <p><strong>วีซ่า:</strong> ใช้วีซ่าเชงเก้น</p>
+              <p><strong>สิ่งที่น่าสนใจ:</strong> Liseberg, Gothenburg Archipelago</p>
+              <p><strong>อาหาร:</strong> Meatballs, Fika (กาแฟ+ขนม)</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-brand/5 rounded-2xl p-4 sm:p-6 border border-brand/10">
+          <h3 class="font-bold text-brand-dark mb-3 flex items-center gap-2"><i data-lucide="lightbulb" class="w-5 h-5 text-brand shrink-0"></i>เคล็ดลับการเดินทาง</h3>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand mt-0.5 shrink-0"></i>นำเสื้อกันฝน/กันลม ที่กันน้ำได้ดี สภาพอากาศเปลี่ยนแปลงบ่อย</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand mt-0.5 shrink-0"></i>รองเท้าเดินป่ากันน้ำเป็นสิ่งจำเป็น</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand mt-0.5 shrink-0"></i>ชำระเงินด้วยบัตรเครดิตได้ทุกที่ (Cashless society)</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand mt-0.5 shrink-0"></i>ปลั๊กอะแดปเตอร์แบบ Type C/F สำหรับชาร์จอุปกรณ์</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand mt-0.5 shrink-0"></i>แนะนำซื้อ eSIM สำหรับใช้อินเทอร์เน็ตในยุโรป</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════ WEATHER ════ -->
+    <section id="sec-weather" class="hidden fade-in py-6 sm:py-8">
+      <h2 class="text-xl sm:text-2xl font-bold text-brand-dark mb-1">สภาพอากาศ</h2>
+      <p class="text-xs sm:text-sm text-gray-500 mb-5">ข้อมูลอ้างอิงจาก <a href="https://www.accuweather.com" target="_blank" rel="noopener noreferrer" class="text-brand underline">AccuWeather.com</a> (คาดการณ์สำหรับเดือนตุลาคม)</p>
+      <div class="space-y-4">
+        <div class="bg-white rounded-2xl border border-brand/20 p-4 sm:p-6 shadow-sm">
+          <h3 class="font-bold text-base sm:text-lg text-brand-dark mb-4 flex items-center gap-2">🇫🇴 หมู่เกาะแฟโร (2-6 ต.ค.)</h3>
+          <div class="grid grid-cols-5 gap-2">
+            <div class="bg-brand-50 rounded-xl p-2 sm:p-3 text-center"><p class="text-xs text-gray-500">2 ต.ค.</p><span class="text-xl sm:text-2xl">🌦️</span><p class="font-bold text-brand-dark text-sm">9°C</p><p class="text-xs text-gray-500 hidden sm:block">ฝนปรอย</p></div>
+            <div class="bg-brand-50 rounded-xl p-2 sm:p-3 text-center"><p class="text-xs text-gray-500">3 ต.ค.</p><span class="text-xl sm:text-2xl">🌧️</span><p class="font-bold text-brand-dark text-sm">8°C</p><p class="text-xs text-gray-500 hidden sm:block">ฝนเป็นช่วง</p></div>
+            <div class="bg-brand-50 rounded-xl p-2 sm:p-3 text-center"><p class="text-xs text-gray-500">4 ต.ค.</p><span class="text-xl sm:text-2xl">⛅</span><p class="font-bold text-brand-dark text-sm">10°C</p><p class="text-xs text-gray-500 hidden sm:block">เมฆบางส่วน</p></div>
+            <div class="bg-brand-50 rounded-xl p-2 sm:p-3 text-center"><p class="text-xs text-gray-500">5 ต.ค.</p><span class="text-xl sm:text-2xl">🌬️</span><p class="font-bold text-brand-dark text-sm">9°C</p><p class="text-xs text-gray-500 hidden sm:block">ลมแรง</p></div>
+            <div class="bg-brand-50 rounded-xl p-2 sm:p-3 text-center"><p class="text-xs text-gray-500">6 ต.ค.</p><span class="text-xl sm:text-2xl">🌤️</span><p class="font-bold text-brand-dark text-sm">10°C</p><p class="text-xs text-gray-500 hidden sm:block">แดดออกบ้าง</p></div>
+          </div>
+          <p class="text-xs text-gray-400 mt-3">* อุณหภูมิเฉลี่ย: 7-11°C | ลมแรง 30-50 km/h | ฝนตก 15-20 วัน/เดือน</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-brand/20 p-4 sm:p-6 shadow-sm">
+          <h3 class="font-bold text-base sm:text-lg text-brand-dark mb-4 flex items-center gap-2">🇸🇪 กอเทนเบิร์ก (6-8 ต.ค.)</h3>
+          <div class="grid grid-cols-3 gap-2">
+            <div class="bg-brand-50 rounded-xl p-2 sm:p-3 text-center"><p class="text-xs text-gray-500">6 ต.ค.</p><span class="text-xl sm:text-2xl">🌥️</span><p class="font-bold text-brand-dark text-sm">12°C</p><p class="text-xs text-gray-500 hidden sm:block">เมฆมาก</p></div>
+            <div class="bg-brand-50 rounded-xl p-2 sm:p-3 text-center"><p class="text-xs text-gray-500">7 ต.ค.</p><span class="text-xl sm:text-2xl">🌦️</span><p class="font-bold text-brand-dark text-sm">11°C</p><p class="text-xs text-gray-500 hidden sm:block">ฝนปรอย</p></div>
+            <div class="bg-brand-50 rounded-xl p-2 sm:p-3 text-center"><p class="text-xs text-gray-500">8 ต.ค.</p><span class="text-xl sm:text-2xl">⛅</span><p class="font-bold text-brand-dark text-sm">12°C</p><p class="text-xs text-gray-500 hidden sm:block">เมฆบางส่วน</p></div>
+          </div>
+          <p class="text-xs text-gray-400 mt-3">* อุณหภูมิเฉลี่ย: 8-13°C | ฝนตกปานกลาง</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-brand/20 p-4 sm:p-6 shadow-sm">
+          <h3 class="font-bold text-base sm:text-lg text-brand-dark mb-4 flex items-center gap-2">🇩🇰 โคเปนเฮเกน (8-9 ต.ค.)</h3>
+          <div class="grid grid-cols-2 gap-2">
+            <div class="bg-brand-50 rounded-xl p-2 sm:p-3 text-center"><p class="text-xs text-gray-500">8 ต.ค.</p><span class="text-xl sm:text-2xl">🌤️</span><p class="font-bold text-brand-dark text-sm">13°C</p><p class="text-xs text-gray-500 hidden sm:block">แดดออกบ้าง</p></div>
+            <div class="bg-brand-50 rounded-xl p-2 sm:p-3 text-center"><p class="text-xs text-gray-500">9 ต.ค.</p><span class="text-xl sm:text-2xl">⛅</span><p class="font-bold text-brand-dark text-sm">12°C</p><p class="text-xs text-gray-500 hidden sm:block">เมฆบางส่วน</p></div>
+          </div>
+          <p class="text-xs text-gray-400 mt-3">* อุณหภูมิเฉลี่ย: 9-14°C | อากาศเย็นสบาย</p>
+        </div>
+        <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-4">
+          <p class="text-xs sm:text-sm text-yellow-800 flex items-start gap-2">
+            <i data-lucide="alert-triangle" class="w-4 h-4 mt-0.5 shrink-0"></i>
+            <span><strong>หมายเหตุ:</strong> ข้อมูลอากาศเป็นการคาดการณ์สำหรับเดือนตุลาคม ควรตรวจสอบพยากรณ์อีกครั้งก่อนเดินทาง ที่ <a href="https://www.accuweather.com/en/fo/torshavn/296647/weather-forecast/296647" target="_blank" rel="noopener noreferrer" class="text-brand underline">AccuWeather</a></span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer class="bg-brand-dark text-white/80 text-center text-xs sm:text-sm py-6 px-4 mt-4">
+    <p class="mb-1">จัดโดย Bluefly Travel</p>
+    <p>Denmark · Sweden · Faroe Islands | 1-10 October 2026</p>
+  </footer>
+
+</div>
+
+<script>
+function showSection(id) {
+  document.querySelectorAll('[id^="sec-"]').forEach(s => s.classList.add('hidden'));
+  document.getElementById('sec-' + id).classList.remove('hidden');
+  document.querySelectorAll('nav button').forEach(b => {
+    b.classList.remove('tab-active');
+    b.classList.add('text-gray-500');
+  });
+  const tab = document.getElementById('tab-' + id);
+  tab.classList.add('tab-active');
+  tab.classList.remove('text-gray-500');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+lucide.createIcons();
+</script>
+</body>
+</html>
