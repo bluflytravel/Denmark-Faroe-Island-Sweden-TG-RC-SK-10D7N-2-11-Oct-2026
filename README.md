@@ -228,6 +228,64 @@ body { font-family: 'Prompt', sans-serif; }
   .flight-row { flex-wrap: wrap; row-gap: 0.75rem; }
   .flight-row .flight-arrow { order: 3; width: 100%; }
 }
+
+/* --- Image slider: swipeable, one large image at a time --- */
+.img-slider {
+  position: relative;
+  margin-top: 0.75rem;
+}
+.img-slider-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 0.75rem;
+  scrollbar-width: none;
+}
+.img-slider-track::-webkit-scrollbar { display: none; }
+.img-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+.img-slide img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+.img-slider-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  pointer-events: none;
+}
+.img-slider-dots span {
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: rgba(255,255,255,0.55);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.img-slider-dots span.active {
+  background: #ffffff;
+  transform: scale(1.3);
+}
+.img-slider-counter {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(15,23,42,0.55);
+  color: #fff;
+  font-size: 0.65rem;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  pointer-events: none;
+}
 </style>
   <style>body { box-sizing: border-box; }</style>
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
@@ -933,9 +991,13 @@ Harbour) ตามความเชื่อในตำนานนอร์�
         <div class="text-sm">
           <p class="font-semibold">🚌 เมืองสตรอมสตัด (Stromstad) - เสาหิน Blomsholm</p>
           <p class="text-subtle mt-1">นำคณะเดินทางสู่ เมืองสตรอมสตัด (Stromstad) (ใช้เวลาเดินทางประมาณ 1 ชั่วโมง ระยะทาง 75 กิโลเมตร) เมืองเล็กๆตั้งอยู่ใกล้พรหมแดนประเทศนอร์เวย์ เมืองสตรอมสตัด มีชื่อเสียงเรื่องแหล่งสปาและทะเล ชม Blomsholm เสาหินที่มีลักษณะคล้ายกับสโตนเฮจของประเทศอิตาลี มีขนาดใหญ่เป็นอันดับ 3 ของประเทศ แลนด์มาร์กสำคัญของเมืองเล็กๆแห่งนี้ ที่คาดว่าสร้างมาตั้งแต่ยุคโบราณ</p>
-            <div class="mt-3 flex gap-3">
-              <img src="https://images.ferryhopper.com/locations/sweden/stromstad/fjallbacka-archipelago-town-islands.jpg" class="w-1/2 rounded-lg object-cover aspect-video" alt="Dinner 1">
-              <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/63/03/8d/img-20190503-103805-largejpg.jpg?w=900&h=500&s=1" class="w-1/2 rounded-lg object-cover aspect-video" alt="Dinner 2">
+          <div class="img-slider">
+            <div class="img-slider-track">
+              <div class="img-slide"><img src="https://images.ferryhopper.com/locations/sweden/stromstad/fjallbacka-archipelago-town-islands.jpg" loading="lazy" alt="Stromstad 1"></div>
+              <div class="img-slide"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/63/03/8d/img-20190503-103805-largejpg.jpg?w=900&h=500&s=1" loading="lazy" alt="Stromstad 2"></div>
+            </div>
+            <div class="img-slider-dots"><span class="active"></span><span></span></div>
+            <div class="img-slider-counter">1/2</div>
           </div>
         </div>
       </div>
@@ -945,9 +1007,13 @@ Harbour) ตามความเชื่อในตำนานนอร์�
         <div class="text-sm">
           <p class="font-semibold">📸 ย่านกลางเมือง (Stromstad Town) </p>
           <p class="text-subtle mt-1">ชม ย่านกลางเมือง (Stromstad Town) บรรยากาศของอาคารบ้านเรือนแบบโบราณที่เต็มไปด้วยเสน่ห์ ผ่านชม ศาลาว่าการเมืองสตรอมสตัด (City Hall Stromstad) หนึ่งในอาคารทางราชการที่สวยงามและมีเอกลักษณ์โดดเด่นที่สุดแห่งหนึ่งของประเทศสวีเดน ตัวอาคารสร้างขึ้นในสไตล์นวศิลป์ (Art Nouveau หรือ Jugendstil) โดยใช้วัสดุหลักเป็นหินแกรนิตซึ่งสะท้อนถึงทักษะและความเชี่ยวชาญอันยอดเยี่ยมของช่างสกัดหินในภูมิภาคบูฮุสแลน (Bohuslän)</p>
-            <div class="mt-3 flex gap-3">
-              <img src="https://images.ferryhopper.com/destination/stromstad-sweden-town.jpg" class="w-1/2 rounded-lg object-cover aspect-video" alt="Dinner 1">
-              <img src="https://www.stromstad.se/images/200.749422bf18f0f73bb761b711/1714391339911/Stadshus-utomhus-800.webp" class="w-1/2 rounded-lg object-cover aspect-video" alt="Dinner 2">
+          <div class="img-slider">
+            <div class="img-slider-track">
+              <div class="img-slide"><img src="https://images.ferryhopper.com/destination/stromstad-sweden-town.jpg" loading="lazy" alt="Stromstad Town 1"></div>
+              <div class="img-slide"><img src="https://www.stromstad.se/images/200.749422bf18f0f73bb761b711/1714391339911/Stadshus-utomhus-800.webp" loading="lazy" alt="Stromstad Town 2"></div>
+            </div>
+            <div class="img-slider-dots"><span class="active"></span><span></span></div>
+            <div class="img-slider-counter">1/2</div>
           </div>
         </div>
       </div>
@@ -1028,9 +1094,13 @@ Harbour) ตามความเชื่อในตำนานนอร์�
         <div class="text-sm">
           <p class="font-semibold">📸 ย่านเมืองจำลองวาดเคอพิง (Wadkoping) </p>
           <p class="text-subtle mt-1">ชม ย่านเมืองจำลองวาดเคอพิง (Wadkoping) ชมอาคารบ้านไม้สีส้มแดงเก่าแก่อายุหลายร้อยปี สีแดงของตัวอาคารตัดกับสีขาวของประตู หน้าต่างอันเป็นเอกลักษณ์ที่สวยงาม</p>
-            <div class="mt-3 flex gap-3">
-              <img src="https://www.noje.se/uploads/articles/d1f25d1a26eece39cce352f5fb457c19.jpg" class="w-1/2 rounded-lg object-cover aspect-video" alt="Dinner 1">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnYph5Pb7OC0THFzpTCx1TuHf-EIiJbDT32rk5yaCSzxduxJJYPuaG8WB9&s=10" class="w-1/2 rounded-lg object-cover aspect-video" alt="Dinner 2">
+          <div class="img-slider">
+            <div class="img-slider-track">
+              <div class="img-slide"><img src="https://www.noje.se/uploads/articles/d1f25d1a26eece39cce352f5fb457c19.jpg" loading="lazy" alt="Wadkoping 1"></div>
+              <div class="img-slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnYph5Pb7OC0THFzpTCx1TuHf-EIiJbDT32rk5yaCSzxduxJJYPuaG8WB9&s=10" loading="lazy" alt="Wadkoping 2"></div>
+            </div>
+            <div class="img-slider-dots"><span class="active"></span><span></span></div>
+            <div class="img-slider-counter">1/2</div>
           </div>
         </div>
       </div>
@@ -1071,9 +1141,13 @@ Harbour) ตามความเชื่อในตำนานนอร์�
         <div class="text-sm">
           <p class="font-semibold">📸 ย่านเมืองเก่ากัมลา สแตน (Gamla Stan) </p>
           <p class="text-subtle mt-1">ชม ย่านเมืองเก่ากัมลา สแตน (Gamla Stan) ส่วนที่เก่าแก่ที่สุดของเมือง และถือว่าเป็นอีกหนึ่งสถานที่ที่แน่นอนว่าท่านจะต้องไม่พลาดมาเยือน ซึ่งที่นี่จะได้พบกับอาคารบ้านเรือนสมัยโบราณราวคริสต์ศตวรรษที่ 13 ซึ่งปัจจุบันยังคงรักษาสภาพอาคารบ้านเรือนเก่าแก่ที่ได้อย่างดีเยี่ยม นำ คณะชมโบสถ์เก่าแก่ชื่อถือเป็นโบสถ์คู่บ้านคู่เมืองของสต็อคโฮลม์สร้างมาตั้งแต่สมัยศตวรรษ ที่ 15 กษัตริย์ Sten Sture The Elder โปรดให้สร้างขึ้นเพื่อระลึกถึงชัยชนะของสวีเดนที่มีต่อเดนมาร์ก โดยในหนังสือเล่มหนึ่งได้กล่าวว่าเซนต์ จอร์จ หมายถึงสวีเดน ส่วนมังกรหมายถึง เดนมาร์ก</p>
-            <div class="mt-3 flex gap-3">
-              <img src="https://cdn.britannica.com/17/195517-050-DFE271D3/Buildings-square-Stockholm-Gamla-Stan.jpg" class="w-1/2 rounded-lg object-cover aspect-video" alt="Dinner 1">
-              <img src="https://thehiddennorth.com/wp-content/uploads/2022/04/Vastlanggatan-1024x768.jpg" class="w-1/2 rounded-lg object-cover aspect-video" alt="Dinner 2">
+          <div class="img-slider">
+            <div class="img-slider-track">
+              <div class="img-slide"><img src="https://cdn.britannica.com/17/195517-050-DFE271D3/Buildings-square-Stockholm-Gamla-Stan.jpg" loading="lazy" alt="Gamla Stan 1"></div>
+              <div class="img-slide"><img src="https://thehiddennorth.com/wp-content/uploads/2022/04/Vastlanggatan-1024x768.jpg" loading="lazy" alt="Gamla Stan 2"></div>
+            </div>
+            <div class="img-slider-dots"><span class="active"></span><span></span></div>
+            <div class="img-slider-counter">1/2</div>
           </div>
         </div>
       </div>
@@ -1514,6 +1588,30 @@ function showDay(n) {
   if (dayEl) { dayEl.style.display = 'block'; dayEl.classList.remove('fade-in'); void dayEl.offsetWidth; dayEl.classList.add('fade-in'); }
   document.querySelectorAll('.day-tab')[n - 1]?.classList.add('active-day');
 }
+
+// ===== Image slider (swipe carousel) =====
+function initImgSliders(root) {
+  (root || document).querySelectorAll('.img-slider').forEach(slider => {
+    if (slider.dataset.sliderInit) return;
+    slider.dataset.sliderInit = '1';
+    const track = slider.querySelector('.img-slider-track');
+    const dots = slider.querySelectorAll('.img-slider-dots span');
+    const counter = slider.querySelector('.img-slider-counter');
+    const total = slider.querySelectorAll('.img-slide').length;
+    let ticking = false;
+    track.addEventListener('scroll', () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const idx = Math.round(track.scrollLeft / track.clientWidth);
+        dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+        if (counter) counter.textContent = (idx + 1) + '/' + total;
+        ticking = false;
+      });
+    }, { passive: true });
+  });
+}
+initImgSliders();
 
 const defaultConfig = {
   main_title: 'SPAIN EXPLORER',
