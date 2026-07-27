@@ -907,7 +907,7 @@ Harbour) ตามความเชื่อในตำนานนอร์�
         <div class="text-sm">
           <p class="font-semibold">💉 EUROSPINE 2026</p>
           <div class="mt-3">
-            <img src="https://www.dccam.com.au/nsanz2026/images/Eurospine_2026_MEET_Event_Cal_ES26.png" loading="lazy" class="tour-img" alt="Korankei Valley">
+            <img src="https://media.licdn.com/dms/image/v2/D4D22AQEIOeY2ED_pvg/feedshare-shrink_800/B4DZ9rKiLcJAAg-/0/1784209352109?e=2147483647&v=beta&t=fi5FzE7m4AnvWht4nk6PI46MSPtSx0l93KRggirA4Pk" loading="lazy" class="tour-img" alt="Korankei Valley">
           </div>
         </div>
       </div>
