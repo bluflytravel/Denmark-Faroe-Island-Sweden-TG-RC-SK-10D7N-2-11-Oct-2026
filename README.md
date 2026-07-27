@@ -382,7 +382,7 @@ body { font-family: 'Prompt', sans-serif; }
 
       <div class="flex justify-center">
        <div class="bg-amber-50 border border-amber-200 rounded-full px-4 py-1 text-xs text-amber-700">
-        🔄 เปลี่ยนเครื่องที่โคเปนเฮเกน — Transit 4 ชม. 45 นาที
+        🔄 เปลี่ยนเครื่องที่โคเปนเฮเกน 4 ชม. 45 นาที
        </div>
       </div>
 
@@ -446,7 +446,7 @@ body { font-family: 'Prompt', sans-serif; }
       
       <div class="flex justify-center">
        <div class="bg-amber-50 border border-amber-200 rounded-full px-4 py-1 text-xs text-amber-700">
-        🔄 เปลี่ยนเครื่องที่โคเปนเฮเกน — Transit 2 ชม. 40 นาที
+        🔄 เปลี่ยนเครื่องที่โคเปนเฮเกน 2 ชม. 40 นาที
        </div>
       </div>
 
@@ -496,11 +496,9 @@ body { font-family: 'Prompt', sans-serif; }
          <p class="text-xs text-subtle mb-1">11 ชม.</p>
          <div class="w-full flex items-center">
           <div class="w-2 h-2 rounded-full bg-brand"></div>
-          <div class="flex-1 h-[2px] bg-gradient-to-r from-brand to-brand-dark"></div>
-          <span class="text-lg">✈️</span>
+          <div class="flex-1 h-[2px] bg-gradient-to-r from-brand to-brand-dark"></div><span class="text-lg">✈️</span>
          </div>
         </div>
-
         <div class="text-center">
          <p class="text-2xl font-bold text-brand-dark">05:50 (+1)</p>
          <p class="text-sm font-medium">BKK</p>
@@ -909,7 +907,7 @@ Harbour) ตามความเชื่อในตำนานนอร์�
         <div class="text-sm">
           <p class="font-semibold">💉 EUROSPINE 2026</p>
           <div class="mt-3">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvmWh5CQcE0ciP9kmdT5PmgTfHAnXfwxF-8wufqxNOwvp3R311zC6pFRg&s=10" loading="lazy" class="tour-img" alt="Korankei Valley">
+            <img src="https://www.dccam.com.au/nsanz2026/images/Eurospine_2026_MEET_Event_Cal_ES26.png" loading="lazy" class="tour-img" alt="Korankei Valley">
           </div>
         </div>
       </div>
