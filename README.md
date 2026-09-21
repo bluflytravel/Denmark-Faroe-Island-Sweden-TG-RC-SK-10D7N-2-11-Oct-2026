@@ -884,7 +884,7 @@ Harbour) ตามความเชื่อในตำนานนอร์�
 
        </div>
        <div class="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-3 text-xs flex items-center gap-2">
-        <span>🏨</span> <strong>นำคณะเข้าสู่ที่พัก Scandic Göteborg Central หรือเทียบเท่า ★★★★</strong>
+        <span>🏨</span> <strong>นำคณะเข้าสู่ที่พัก Radisson Blu Riverside Hotel หรือเทียบเท่า ★★★★</strong>
        </div>
       </div>
      </div><!-- /day-5 -->
@@ -1161,7 +1161,7 @@ Harbour) ตามความเชื่อในตำนานนอร์�
 
     </div>
     <div class="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-3 text-xs flex items-center gap-2">
-      <span>🏨</span> <strong>นำคณะเข้าสู่ที่พัก Quality Hotel Strawberry Arena หรือเทียบเท่า ★★★★</strong>
+      <span>🏨</span> <strong>นำคณะเข้าสู่ที่พัก Radisson Blu Royal Viking Hotel หรือเทียบเท่า ★★★★</strong>
     </div>
   </div>
 </div><!-- /day-8 -->
@@ -1247,28 +1247,36 @@ Harbour) ตามความเชื่อในตำนานนอร์�
   </div>
 
   <div class="bg-brand-50 rounded-2xl p-5 border border-brand/10 mb-6">
-    <h3 class="font-semibold text-brand-dark mb-3 text-lg">💴 อัตราแลกเปลี่ยนโดยประมาณ</h3>
+    <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+      <h3 class="font-semibold text-brand-dark text-lg">💴 อัตราแลกเปลี่ยนโดยประมาณ</h3>
+      <span class="text-xs bg-white/70 border border-brand/20 text-brand-dark rounded-full px-3 py-1">🔄 อัปเดตล่าสุด 21 ก.ย. 2569</span>
+    </div>
     <div class="grid md:grid-cols-2 gap-6 text-sm">
       <div>
         <p class="font-semibold text-brand mb-2">🇩🇰 โครนเดนมาร์ก (DKK) — ใช้ในหมู่เกาะแฟโรด้วย</p>
         <div class="space-y-2">
-          <div class="flex justify-between"><span class="text-subtle">1 DKK ≈</span><span class="font-medium">~5.1 บาท</span></div>
-          <div class="flex justify-between"><span class="text-subtle">100 DKK ≈</span><span class="font-medium">~510 บาท</span></div>
-          <div class="flex justify-between"><span class="text-subtle">500 DKK ≈</span><span class="font-medium">~2,550 บาท</span></div>
-          <div class="flex justify-between"><span class="text-subtle">1,000 DKK ≈</span><span class="font-medium">~5,100 บาท</span></div>
+          <div class="flex justify-between"><span class="text-subtle">1 DKK ≈</span><span class="font-medium">~5.12 บาท</span></div>
+          <div class="flex justify-between"><span class="text-subtle">100 DKK ≈</span><span class="font-medium">~512 บาท</span></div>
+          <div class="flex justify-between"><span class="text-subtle">500 DKK ≈</span><span class="font-medium">~2,560 บาท</span></div>
+          <div class="flex justify-between"><span class="text-subtle">1,000 DKK ≈</span><span class="font-medium">~5,120 บาท</span></div>
         </div>
+        <p class="text-xs text-subtle mt-2">📈 ช่วง 30 วันที่ผ่านมาเคลื่อนไหวราว 5.10 – 5.16 บาท/DKK</p>
       </div>
       <div>
         <p class="font-semibold text-brand mb-2">🇸🇪 โครนาสวีเดน (SEK)</p>
         <div class="space-y-2">
-          <div class="flex justify-between"><span class="text-subtle">1 SEK ≈</span><span class="font-medium">~3.5 บาท</span></div>
-          <div class="flex justify-between"><span class="text-subtle">100 SEK ≈</span><span class="font-medium">~350 บาท</span></div>
-          <div class="flex justify-between"><span class="text-subtle">500 SEK ≈</span><span class="font-medium">~1,750 บาท</span></div>
-          <div class="flex justify-between"><span class="text-subtle">1,000 SEK ≈</span><span class="font-medium">~3,500 บาท</span></div>
+          <div class="flex justify-between"><span class="text-subtle">1 SEK ≈</span><span class="font-medium">~3.40 บาท</span></div>
+          <div class="flex justify-between"><span class="text-subtle">100 SEK ≈</span><span class="font-medium">~340 บาท</span></div>
+          <div class="flex justify-between"><span class="text-subtle">500 SEK ≈</span><span class="font-medium">~1,700 บาท</span></div>
+          <div class="flex justify-between"><span class="text-subtle">1,000 SEK ≈</span><span class="font-medium">~3,400 บาท</span></div>
         </div>
+        <p class="text-xs text-subtle mt-2">📉 ช่วง 30 วันที่ผ่านมาเคลื่อนไหวราว 3.39 – 3.48 บาท/SEK (อ่อนค่าลงเล็กน้อย)</p>
       </div>
     </div>
-    <div class="mt-3 bg-white/60 rounded-lg p-2 text-xs text-subtle">💡 แนะนำแลกเงินยูโรหรือแลกเป็นโครนเดนมาร์ก/โครนาสวีเดนบางส่วนจากไทยก่อนเดินทาง หรือใช้บัตรเครดิต/เดบิตแบบ multi-currency เนื่องจากทั้งเดนมาร์ก หมู่เกาะแฟโร และสวีเดน นิยมใช้บัตรมากกว่าเงินสด ร้านค้าจำนวนมากรับชำระด้วยบัตรเกือบ 100% อัตราแลกเปลี่ยนอาจเปลี่ยนแปลงได้ กรุณาตรวจสอบอีกครั้งก่อนเดินทาง</div>
+    <div class="mt-3 grid md:grid-cols-2 gap-3 text-xs">
+      <div class="bg-white/60 rounded-lg p-3 text-subtle">💡 <strong>เทียบราคาง่ายๆ:</strong> เมนูอาหารจานหลักในแฟโรราว 180–280 DKK (≈ 920–1,430 บาท) • กาแฟ 1 แก้ว ~35 DKK (≈ 180 บาท) • ในสวีเดนอาหารจานหลัก 180–300 SEK (≈ 610–1,020 บาท) • กาแฟ ~45 SEK (≈ 155 บาท)</div>
+      <div class="bg-white/60 rounded-lg p-3 text-subtle">💳 แนะนำแลกเงินยูโรหรือแลกเป็นโครนเดนมาร์ก/โครนาสวีเดนบางส่วนจากไทยก่อนเดินทาง หรือใช้บัตรเครดิต/เดบิตแบบ multi-currency เนื่องจากทั้งเดนมาร์ก หมู่เกาะแฟโร และสวีเดน นิยมใช้บัตรมากกว่าเงินสด ร้านค้าจำนวนมากรับชำระด้วยบัตรเกือบ 100% <strong>อัตราแลกเปลี่ยนเป็นอัตรากลางตลาด (mid-market) อาจเปลี่ยนแปลงได้ กรุณาตรวจสอบอีกครั้งก่อนเดินทาง</strong></div>
+    </div>
   </div>
 
   <div class="mt-6 bg-amber-50 border border-amber-200 rounded-2xl p-5">
@@ -1316,7 +1324,8 @@ Harbour) ตามความเชื่อในตำนานนอร์�
 <!-- ========== WEATHER ========== -->
 <section id="sec-weather" class="tab-section fade-in">
   <h2 class="font-display text-2xl md:text-3xl font-bold text-brand-dark mb-2">🌤️ สภาพอากาศ</h2>
-  <p class="text-sm text-subtle mb-6">คาดการณ์สภาพอากาศโดยอ้างอิงค่าเฉลี่ยภูมิอากาศช่วงต้น–กลางเดือนตุลาคม สำหรับหมู่เกาะแฟโรและสวีเดน • อ้างอิง: <a href="https://www.accuweather.com" target="_blank" rel="noopener noreferrer" class="text-brand underline">accuweather.com</a></p>
+  <p class="text-sm text-subtle mb-2">คาดการณ์จากค่าเฉลี่ยภูมิอากาศช่วงต้น–กลางเดือนตุลาคม ร่วมกับแนวโน้มอากาศปัจจุบันของหมู่เกาะแฟโรและสวีเดน • อ้างอิง: <a href="https://www.accuweather.com" target="_blank" rel="noopener noreferrer" class="text-brand underline">accuweather.com</a></p>
+  <div class="inline-flex items-center gap-2 text-xs bg-brand-50 border border-brand/20 text-brand-dark rounded-full px-3 py-1 mb-6">🔄 อัปเดตล่าสุด 21 ก.ย. 2569</div>
 
   <h3 class="font-semibold text-brand-dark mb-3">🏝️ หมู่เกาะแฟโร (วันที่ 2–5)</h3>
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
@@ -1324,17 +1333,19 @@ Harbour) ตามความเชื่อในตำนานนอร์�
       <p class="text-xs text-subtle">3–5 ต.ค. (วันที่ 2–4)</p>
       <p class="font-semibold text-sm">ทอร์สเฮาน์ / เกาะคัลซอย / Saksun</p>
       <div class="weather-icon my-2">🌦️</div>
-      <p class="text-2xl font-bold text-brand-dark">11°<span class="text-base font-normal text-subtle">/7°C</span></p>
+      <p class="text-2xl font-bold text-brand-dark">11°<span class="text-base font-normal text-subtle">/8°C</span></p>
       <p class="text-xs text-subtle mt-1">มีเมฆมาก ลมแรง ฝนปรอยเป็นช่วงๆ</p>
-      <div class="flex justify-center gap-3 mt-2 text-xs text-subtle"><span>💧 85%</span><span>🌧️ 55%</span></div>
+      <div class="flex justify-center gap-3 mt-2 text-xs text-subtle"><span>💧 87%</span><span>🌧️ 60%</span><span>🌬️ 25–45 กม./ชม.</span></div>
+      <p class="text-[11px] text-subtle mt-2">🥶 อุณหภูมิที่รู้สึกได้จริงบนหน้าผา/จุดชมวิว ประมาณ 4–6°C</p>
     </div>
     <div class="bg-white border border-brand/10 rounded-2xl p-4 card-hover text-center">
       <p class="text-xs text-subtle">6 ต.ค. (วันที่ 5)</p>
       <p class="font-semibold text-sm">Gásadalur / สนามบินวาการ์</p>
       <div class="weather-icon my-2">༄☁️</div>
-      <p class="text-2xl font-bold text-brand-dark">10°<span class="text-base font-normal text-subtle">/6°C</span></p>
-      <p class="text-xs text-subtle mt-1">ลมแรง มีเมฆเป็นส่วนใหญ่</p>
-      <div class="flex justify-center gap-3 mt-2 text-xs text-subtle"><span>💧 82%</span><span>🌧️ 50%</span></div>
+      <p class="text-2xl font-bold text-brand-dark">10°<span class="text-base font-normal text-subtle">/7°C</span></p>
+      <p class="text-xs text-subtle mt-1">ลมแรง มีเมฆเป็นส่วนใหญ่ ฝนปรอยช่วงเช้า</p>
+      <div class="flex justify-center gap-3 mt-2 text-xs text-subtle"><span>💧 85%</span><span>🌧️ 55%</span><span>🌬️ 30–50 กม./ชม.</span></div>
+      <p class="text-[11px] text-subtle mt-2">✈️ ลมแรงอาจทำให้เที่ยวบินที่สนามบินวาการ์ล่าช้าได้</p>
     </div>
   </div>
 
@@ -1344,26 +1355,41 @@ Harbour) ตามความเชื่อในตำนานนอร์�
       <p class="text-xs text-subtle">6–7 ต.ค. (วันที่ 5–6)</p>
       <p class="font-semibold text-sm">กอเทนเบิร์ก / เกาะสโมเก้น</p>
       <div class="weather-icon my-2">🌥️</div>
-      <p class="text-2xl font-bold text-brand-dark">12°<span class="text-base font-normal text-subtle">/6°C</span></p>
-      <p class="text-xs text-subtle mt-1">มีเมฆบางส่วน อาจมีฝนสั้นๆ</p>
-      <div class="flex justify-center gap-3 mt-2 text-xs text-subtle"><span>💧 75%</span><span>🌧️ 40%</span></div>
+      <p class="text-2xl font-bold text-brand-dark">13°<span class="text-base font-normal text-subtle">/7°C</span></p>
+      <p class="text-xs text-subtle mt-1">มีเมฆบางส่วน อาจมีฝนสั้นๆ ลมทะเลเย็น</p>
+      <div class="flex justify-center gap-3 mt-2 text-xs text-subtle"><span>💧 78%</span><span>🌧️ 40%</span><span>🌬️ 15–30 กม./ชม.</span></div>
     </div>
     <div class="bg-white border border-brand/10 rounded-2xl p-4 card-hover text-center">
       <p class="text-xs text-subtle">8 ต.ค. (วันที่ 7)</p>
       <p class="font-semibold text-sm">สตรอมสตัด / คาร์ลสตัด</p>
       <div class="weather-icon my-2">🌤️</div>
-      <p class="text-2xl font-bold text-brand-dark">11°<span class="text-base font-normal text-subtle">/5°C</span></p>
-      <p class="text-xs text-subtle mt-1">อากาศเย็น ท้องฟ้าโปร่งบางช่วง</p>
-      <div class="flex justify-center gap-3 mt-2 text-xs text-subtle"><span>💧 70%</span><span>🌧️ 30%</span></div>
+      <p class="text-2xl font-bold text-brand-dark">12°<span class="text-base font-normal text-subtle">/5°C</span></p>
+      <p class="text-xs text-subtle mt-1">อากาศเย็น ท้องฟ้าโปร่งบางช่วง กลางคืนเย็นจัด</p>
+      <div class="flex justify-center gap-3 mt-2 text-xs text-subtle"><span>💧 72%</span><span>🌧️ 30%</span><span>🌬️ 10–25 กม./ชม.</span></div>
     </div>
     <div class="bg-white border border-brand/10 rounded-2xl p-4 card-hover text-center">
       <p class="text-xs text-subtle">9–10 ต.ค. (วันที่ 8–9)</p>
       <p class="font-semibold text-sm">เออเรบลู / สตอกโฮล์ม</p>
       <div class="weather-icon my-2">🍂</div>
-      <p class="text-2xl font-bold text-brand-dark">10°<span class="text-base font-normal text-subtle">/4°C</span></p>
+      <p class="text-2xl font-bold text-brand-dark">11°<span class="text-base font-normal text-subtle">/5°C</span></p>
       <p class="text-xs text-subtle mt-1">อากาศเย็นสบาย เหมาะชมใบไม้เปลี่ยนสี</p>
-      <div class="flex justify-center gap-3 mt-2 text-xs text-subtle"><span>💧 68%</span><span>🌧️ 25%</span></div>
+      <div class="flex justify-center gap-3 mt-2 text-xs text-subtle"><span>💧 70%</span><span>🌧️ 25%</span><span>🌬️ 10–20 กม./ชม.</span></div>
     </div>
+  </div>
+
+  <div class="bg-white border border-brand/10 rounded-2xl p-5 mb-6">
+    <h4 class="font-semibold text-brand-dark mb-3">🌅 ช่วงเวลากลางวัน (โดยประมาณ)</h4>
+    <div class="grid md:grid-cols-2 gap-4 text-sm">
+      <div class="bg-brand-50 rounded-xl p-3">
+        <p class="font-medium">🏝️ ทอร์สเฮาน์ (3–6 ต.ค.)</p>
+        <p class="text-subtle text-xs mt-1">พระอาทิตย์ขึ้น ~07:30 น. / ตก ~19:05 น. — กลางวันประมาณ 11 ชม. 30 นาที และสั้นลงวันละ ~6 นาที</p>
+      </div>
+      <div class="bg-brand-50 rounded-xl p-3">
+        <p class="font-medium">🇸🇪 กอเทนเบิร์ก–สตอกโฮล์ม (6–10 ต.ค.)</p>
+        <p class="text-subtle text-xs mt-1">พระอาทิตย์ขึ้น ~07:15 น. / ตก ~18:30 น. — กลางวันประมาณ 11 ชม. 15 นาที</p>
+      </div>
+    </div>
+    <p class="text-xs text-subtle mt-3">💡 ฟ้ามืดค่อนข้างเร็ว ควรวางแผนถ่ายรูปกลางแจ้งและจุดชมวิวในช่วงก่อน 17:00 น.</p>
   </div>
 
   <div class="mt-2 bg-brand-50 border border-brand/10 rounded-2xl p-5">
@@ -1371,11 +1397,11 @@ Harbour) ตามความเชื่อในตำนานนอร์�
     <div class="grid md:grid-cols-2 gap-4 text-sm">
       <div>
         <p class="font-medium">🏝️ หมู่เกาะแฟโร</p>
-        <p class="text-subtle mt-1">อุณหภูมิกลางวันประมาณ 9–11°C กลางคืนประมาณ 5–7°C ลมแรงตลอดทั้งปีโดยเฉพาะบริเวณหน้าผาและจุดชมวิว ท้องฟ้ามีเมฆปกคลุมเป็นส่วนใหญ่ และมีโอกาสฝนตกปรอยเกือบทุกวัน สภาพอากาศเปลี่ยนแปลงรวดเร็วภายในไม่กี่ชั่วโมง</p>
+        <p class="text-subtle mt-1">อุณหภูมิกลางวันประมาณ 10–11°C กลางคืนประมาณ 7–8°C ช่วงอุณหภูมิแคบมาก (กลางวันกับกลางคืนต่างกันเพียง 2–4°C) แต่<strong>ลมแรงตลอดทั้งวัน</strong> โดยเฉพาะบริเวณหน้าผาและจุดชมวิว ทำให้อุณหภูมิที่รู้สึกได้จริงต่ำกว่าตัวเลขราว 4–6°C ท้องฟ้ามีเมฆปกคลุมเป็นส่วนใหญ่ และมีโอกาสฝนตกปรอยเกือบทุกวัน สภาพอากาศเปลี่ยนแปลงรวดเร็วภายในไม่กี่ชั่วโมง</p>
       </div>
       <div>
         <p class="font-medium">🇸🇪 สวีเดน (กอเทนเบิร์ก–คาร์ลสตัด–สตอกโฮล์ม)</p>
-        <p class="text-subtle mt-1">อุณหภูมิกลางวันประมาณ 10–12°C กลางคืนเย็นลงประมาณ 4–6°C ต้นเดือนตุลาคมเป็นช่วงปลายฤดูใบไม้ร่วง ใบไม้เริ่มเปลี่ยนสี ฝนปานกลางถึงน้อย ท้องฟ้าโปร่งสลับมีเมฆ </p>
+        <p class="text-subtle mt-1">อุณหภูมิกลางวันประมาณ 11–13°C กลางคืนเย็นลงประมาณ 5–7°C เมืองตอนในอย่างคาร์ลสตัดและเออเรบลูจะเย็นกว่าชายฝั่งในตอนกลางคืนราว 2–3°C ต้นเดือนตุลาคมเป็นช่วงกลางฤดูใบไม้ร่วง ใบไม้เริ่มเปลี่ยนสี ฝนปานกลางถึงน้อย ท้องฟ้าโปร่งสลับมีเมฆ</p>
       </div>
     </div>
     <div class="mt-3 bg-blue-50 border border-blue-100 rounded-xl p-3 text-xs text-blue-700 flex items-start gap-2">
@@ -1388,63 +1414,95 @@ Harbour) ตามความเชื่อในตำนานนอร์�
 
 <!-- ========== CLOTHING ========== -->
 <section id="sec-clothing" class="tab-section fade-in">
-  <h2 class="font-display text-2xl md:text-3xl font-bold text-brand-dark mb-6">👔 คำแนะนำการแต่งกาย</h2>
+  <h2 class="font-display text-2xl md:text-3xl font-bold text-brand-dark mb-2">👔 คำแนะนำการแต่งกาย</h2>
+  <div class="inline-flex items-center gap-2 text-xs bg-brand-50 border border-brand/20 text-brand-dark rounded-full px-3 py-1 mb-6">🔄 ปรับให้สอดคล้องกับพยากรณ์อากาศล่าสุด 21 ก.ย. 2569</div>
+
   <div class="bg-brand-50 rounded-2xl p-5 border border-brand/10 mb-6">
     <h3 class="font-semibold text-brand-dark mb-2">🌡️ สภาพอากาศโดยรวม</h3>
-    <p class="text-sm text-subtle">ช่วงต้นเดือนตุลาคมในหมู่เกาะแฟโรและสวีเดนอยู่ในปลายฤดูใบไม้ร่วง กลางวันอากาศเย็น 9–12°C กลางคืนเย็นจัดลงถึง 4–7°C โดยเฉพาะหมู่เกาะแฟโรที่มีลมแรงและฝนปรอยเกือบทุกวัน ต้องเตรียมเสื้อผ้าแบบหลายชั้น เสื้อกันลม/กันฝันแบบกันน้ำ และรองเท้าที่กันลื่นกันน้ำได้ดี</p>
+    <p class="text-sm text-subtle">ช่วงต้นเดือนตุลาคมในหมู่เกาะแฟโรและสวีเดนอยู่ในกลางฤดูใบไม้ร่วง กลางวันอากาศเย็น 10–13°C กลางคืนเย็นลงถึง 5–8°C โดยเฉพาะหมู่เกาะแฟโรที่มีลมแรง 25–50 กม./ชม. และฝนปรอยเกือบทุกวัน ทำให้อุณหภูมิที่รู้สึกได้จริงเหลือเพียง 4–6°C ต้องเตรียมเสื้อผ้าแบบหลายชั้น เสื้อกันลม/กันฝนแบบกันน้ำ และรองเท้าที่กันลื่นกันน้ำได้ดี</p>
+  </div>
+
+  <div class="bg-white border border-brand/10 rounded-2xl p-5 mb-6">
+    <h4 class="font-semibold text-brand-dark mb-3">🧅 หลักการแต่งตัว 3 ชั้น (Layering) สำหรับทริปนี้</h4>
+    <div class="grid md:grid-cols-3 gap-3 text-sm">
+      <div class="bg-brand-50 rounded-xl p-3">
+        <p class="font-medium text-brand-dark">ชั้นที่ 1 — ชั้นใน</p>
+        <p class="text-xs text-subtle mt-1">เสื้อแขนยาวเนื้อผ้าระบายอากาศ หรือ Heattech ระบายเหงื่อได้ดี <strong>หลีกเลี่ยงผ้าฝ้ายล้วน</strong> เพราะเปียกแล้วแห้งช้าและทำให้หนาวจัด</p>
+      </div>
+      <div class="bg-brand-50 rounded-xl p-3">
+        <p class="font-medium text-brand-dark">ชั้นที่ 2 — ชั้นให้ความอบอุ่น</p>
+        <p class="text-xs text-subtle mt-1">เสื้อฟลีซ ขนสัตว์ หรือเสื้อขนเป็ดน้ำหนักเบา ถอดเข้า-ออกได้ง่ายเมื่อเข้าร้านอาหารหรือขึ้นรถบัสที่เปิดฮีตเตอร์</p>
+      </div>
+      <div class="bg-brand-50 rounded-xl p-3">
+        <p class="font-medium text-brand-dark">ชั้นที่ 3 — ชั้นนอก</p>
+        <p class="text-xs text-subtle mt-1">แจ็คเก็ตกันลม-กันน้ำมีฮู้ด (waterproof / windproof) <strong>สำคัญที่สุดของทริปนี้</strong> โดยเฉพาะ 4 วันแรกในหมู่เกาะแฟโร</p>
+      </div>
+    </div>
   </div>
 
   <div class="grid md:grid-cols-2 gap-4 mb-6">
     <div class="bg-white border border-brand/10 rounded-2xl p-5 card-hover">
       <h4 class="font-semibold text-brand-dark mb-3">🧥 เสื้อผ้าหลักที่ต้องเตรียม</h4>
       <ul class="text-sm space-y-2">
-        <li class="flex items-start gap-2"><span>👕</span> เสื้อแขนยาวหรือเสื้อเชิ้ต เนื้อผ้าระบายอากาศ (ชั้นใน)</li>
-        <li class="flex items-start gap-2"><span>🧥</span> เสื้อกันหนาวขนสัตว์ น้ำหนักเบา ใส่ทับได้</li>
-        <li class="flex items-start gap-2"><span>🌬️</span> เสื้อกันลม/กันฝนแบบกันน้ำ (waterproof jacket) จำเป็นมากสำหรับหมู่เกาะแฟโร</li>
-        <li class="flex items-start gap-2"><span>🧣</span> ผ้าพันคอ หมวกไหมพรม สำหรับวันที่ลมแรง</li>
-        <li class="flex items-start gap-2"><span>👖</span> กางเกงขายาวหนา ไม่แนะนำกางเกงขาสั้น</li>
-        <li class="flex items-start gap-2"><span>👟</span> รองเท้าเดินป่ากันน้ำ พื้นกันลื่น สำหรับเดินเทรคกิ้งบนหน้าผาและทุ่งหญ้า</li>
-        <li class="flex items-start gap-2"><span>🧤</span> ถุงมือกันหนาว โดยเฉพาะช่วงเดินชมวิวกลางแจ้ง</li>
+        <li class="flex items-start gap-2"><span>👕</span> เสื้อแขนยาวหรือเสื้อเชิ้ต เนื้อผ้าระบายอากาศ (ชั้นใน) 4–5 ตัว</li>
+        <li class="flex items-start gap-2"><span>🧥</span> เสื้อกันหนาวขนสัตว์/ฟลีซ น้ำหนักเบา ใส่ทับได้ 2 ตัว</li>
+        <li class="flex items-start gap-2"><span>🌬️</span> เสื้อกันลม/กันฝนแบบกันน้ำมีฮู้ด (waterproof jacket) — จำเป็นมากสำหรับหมู่เกาะแฟโร</li>
+        <li class="flex items-start gap-2"><span>🧣</span> ผ้าพันคอ หมวกไหมพรมแบบรัดศีรษะ (ลมแรงมาก หมวกปีกกว้างจะปลิว)</li>
+        <li class="flex items-start gap-2"><span>👖</span> กางเกงขายาวหนาหรือกางเกงกันน้ำ ไม่แนะนำกางเกงขาสั้นและยีนส์ (เปียกแล้วแห้งช้า)</li>
+        <li class="flex items-start gap-2"><span>👟</span> รองเท้าเดินป่ากันน้ำ พื้นกันลื่น สำหรับเดินเทรคกิ้งบนหน้าผาและทุ่งหญ้าเปียก</li>
+        <li class="flex items-start gap-2"><span>🧦</span> ถุงเท้าขนสัตว์หนา 4–5 คู่ (เท้าเปียกเป็นสาเหตุหลักที่ทำให้หนาว)</li>
+        <li class="flex items-start gap-2"><span>🧤</span> ถุงมือกันหนาวกันน้ำ โดยเฉพาะช่วงเดินชมวิวกลางแจ้ง</li>
       </ul>
     </div>
+
+    <div class="bg-white border border-brand/10 rounded-2xl p-5 card-hover">
+      <h4 class="font-semibold text-brand-dark mb-3">👗 ชุดสำหรับโอกาสพิเศษ</h4>
+      <ul class="text-sm space-y-2">
+        <li class="flex items-start gap-2"><span>💉</span> <strong>งาน EUROSPINE 2026 (7 ต.ค.):</strong> ชุด Business / Smart casual — เสื้อเชิ้ต สแล็ค หรือเบลเซอร์ พร้อมเสื้อโค้ทกันหนาวสวมทับตอนเดินทาง</li>
+        <li class="flex items-start gap-2"><span>🍽️</span> <strong>มื้อค่ำในโรงแรม/ภัตตาคาร:</strong> Smart casual เพียงพอ ไม่มี dress code เข้มงวด</li>
+        <li class="flex items-start gap-2"><span>♨️</span> <strong>Vann Spa Hotell (คืนวันที่ 6):</strong> โรงแรมมีสปา แนะนำพกชุดว่ายน้ำและรองเท้าแตะไปด้วย</li>
+        <li class="flex items-start gap-2"><span>✈️</span> <strong>วันเดินทางไกล:</strong> ชุดสบายๆ ใส่-ถอดชั้นได้ง่าย พร้อมผ้าพันคอ/เสื้อคลุมบางสำหรับแอร์เย็นบนเครื่อง</li>
+      </ul>
+    </div>
+  </div>
 
   <h3 class="font-semibold text-brand-dark text-lg mb-3">📅 แนะนำการแต่งกายตามรายวัน</h3>
   <div class="space-y-3">
     <div class="bg-white border-l-4 border-gray-300 rounded-r-xl p-4">
       <p class="font-semibold text-sm">วันที่ 1 | กรุงเทพฯ → สนามบิน (2 ต.ค.)</p>
-      <p class="text-xs text-subtle mt-1">👕 แต่งกายสบายสำหรับเดินทางกลางคืน / 🧥 พกเสื้อคลุมบางขึ้นเครื่อง อากาศเย็นในเครื่องบิน</p>
+      <p class="text-xs text-subtle mt-1">👕 แต่งกายสบายสำหรับเดินทางกลางคืน / 🧥 พกเสื้อคลุมบางขึ้นเครื่อง อากาศเย็นในเครื่องบิน / 🧦 ถุงเท้าอุ่นๆ ช่วยให้หลับสบายบนไฟลท์ยาว</p>
     </div>
     <div class="bg-white border-l-4 border-brand rounded-r-xl p-4">
-      <p class="font-semibold text-sm">วันที่ 2 | โคเปนเฮเกน → หมู่เกาะแฟโร → ทอร์สเฮาน์ (3 ต.ค. | 7–11°C)</p>
-      <p class="text-xs text-subtle mt-1">🧥 เสื้อแขนยาว + เสื้อกันหนาว + เสื้อกันลมกันน้ำ / 👖 กางเกงขายาว / 👟 รองเท้าเดินสบายกันน้ำ / ☔ ร่มพับหรือเสื้อกันฝน (ลมแรง ร่มอาจใช้ยาก แนะนำเสื้อกันฝนแบบมีฮู้ดมากกว่า)</p>
+      <p class="font-semibold text-sm">วันที่ 2 | โคเปนเฮเกน → หมู่เกาะแฟโร → ทอร์สเฮาน์ (3 ต.ค. | 8–11°C · ลม 25–45 กม./ชม.)</p>
+      <p class="text-xs text-subtle mt-1">🧥 เสื้อแขนยาว + ฟลีซ + เสื้อกันลมกันน้ำมีฮู้ด / 👖 กางเกงขายาว / 👟 รองเท้าเดินสบายกันน้ำ / ☔ <strong>ใช้เสื้อกันฝนแบบมีฮู้ดแทนร่ม</strong> — ลมบนเกาะแรงจนร่มพังได้ / 💡 เตรียมเสื้อกันลมไว้ในกระเป๋าถือ ไม่ใช่กระเป๋าโหลด เพราะลงเครื่องแล้วเจออากาศเย็นทันที</p>
     </div>
     <div class="bg-white border-l-4 border-blue-400 rounded-r-xl p-4">
-      <p class="font-semibold text-sm">วันที่ 3 | เกาะคัลซอย → ประภาคารคัลลูร์ (4 ต.ค. | 6–11°C)</p>
-      <p class="text-xs text-subtle mt-1">🧥 แต่งหนาเป็นพิเศษ! เดินเทรคกิ้งริมหน้าผา ลมแรงมาก ต้องมีเสื้อกันลมกันน้ำชั้นนอก / 🧣 หมวกไหมพรม + ถุงมือ / 👟 รองเท้าเดินป่ากันน้ำพื้นเกาะดี</p>
+      <p class="font-semibold text-sm">วันที่ 3 | เกาะคัลซอย → ประภาคารคัลลูร์ (4 ต.ค. | 8–11°C · รู้สึกเหมือน 4–5°C)</p>
+      <p class="text-xs text-subtle mt-1">🧥 <strong>วันที่หนาวที่สุดของทริป!</strong> เดินเทรคกิ้งริมหน้าผา ลมแรงมาก ต้องครบ 3 ชั้น + เสื้อกันลมกันน้ำชั้นนอก / 🧣 หมวกไหมพรมแบบรัดศีรษะ + ถุงมือกันน้ำ / 👟 รองเท้าเดินป่ากันน้ำพื้นเกาะดี (ทางเดินเป็นหญ้าเปียกและโคลน) / 🎒 เป้กันน้ำใส่ชั้นเสื้อสำรอง</p>
     </div>
     <div class="bg-white border-l-4 border-teal-400 rounded-r-xl p-4">
-      <p class="font-semibold text-sm">วันที่ 4 | Saksun → Gjógv → Funningur (5 ต.ค. | 6–10°C)</p>
-      <p class="text-xs text-subtle mt-1">🧥 เสื้อกันหนาว + เสื้อกันลมกันน้ำ / 👖 กางเกงขายาว / 👟 รองเท้าเดินป่า / 🧤 ถุงมือบาง ลมแรงตลอดวัน</p>
+      <p class="font-semibold text-sm">วันที่ 4 | Saksun → Gjógv → Funningur (5 ต.ค. | 7–11°C · ลมแรงตลอดวัน)</p>
+      <p class="text-xs text-subtle mt-1">🧥 เสื้อกันหนาว + เสื้อกันลมกันน้ำ / 👖 กางเกงขายาวกันน้ำ (เดินในทุ่งหญ้าเปียกใกล้น้ำตกฟอสซา) / 👟 รองเท้าเดินป่า / 🧤 ถุงมือบาง / 🕶️ แว่นกันลมช่วยได้มากที่จุดชมวิว</p>
     </div>
     <div class="bg-white border-l-4 border-orange-400 rounded-r-xl p-4">
-      <p class="font-semibold text-sm">วันที่ 5 | น้ำตกมูลาฟอสซูร์ → กอเทนเบิร์ก (6 ต.ค. | 6–12°C)</p>
-      <p class="text-xs text-subtle mt-1">🧥 เสื้อกันหนาว + เสื้อกันลม / 👖 กางเกงขายาว / 👟 รองเท้าผ้าใบหรือรองเท้าเดินสบาย / 💡 เดินทางโดยเครื่องบินภายในวันนี้ เตรียมเสื้อคลุมบางติดตัว</p>
+      <p class="font-semibold text-sm">วันที่ 5 | น้ำตกมูลาฟอสซูร์ → กอเทนเบิร์ก (6 ต.ค. | 7–13°C)</p>
+      <p class="text-xs text-subtle mt-1">🧥 เช้ายังต้องใส่เสื้อกันลมกันน้ำ (ละอองน้ำตกและลมทะเลแรง) / 👖 กางเกงขายาว / 👟 รองเท้าเดินสบาย / 💡 <strong>วันเดินทางด้วยเครื่องบิน 2 ต่อ</strong> — เลือกชุดที่ถอดชั้นง่าย ถึงกอเทนเบิร์กตอน 20:05 น. อากาศค่ำจะเย็นราว 7–8°C</p>
     </div>
     <div class="bg-white border-l-4 border-red-400 rounded-r-xl p-4">
-      <p class="font-semibold text-sm">วันที่ 6 | เกาะสโมเก้น → บราสตัด (7 ต.ค. | 6–12°C)</p>
-      <p class="text-xs text-subtle mt-1">👕 เสื้อแขนยาว + แจ็คเก็ตกันลม / 👖 กางเกงขายาว / 👟 รองเท้าสบายสำหรับเดินเที่ยวหมู่บ้านชาวประมง</p>
+      <p class="font-semibold text-sm">วันที่ 6 | EUROSPINE / เกาะสโมเก้น → บราสตัด (7 ต.ค. | 7–13°C)</p>
+      <p class="text-xs text-subtle mt-1">👔 <strong>ผู้เข้าร่วมประชุม:</strong> Business/Smart casual + โค้ทกันหนาวสวมทับ / 👕 <strong>ผู้ติดตาม:</strong> เสื้อแขนยาว + แจ็คเก็ตกันลม / 👟 รองเท้าพื้นกันลื่นสำหรับเดินบนโขดหินแกรนิตริมทะเลที่สโมเก้น (ลื่นเมื่อเปียก) / ♨️ พกชุดว่ายน้ำสำหรับสปาที่ Vann Spa Hotell</p>
     </div>
     <div class="bg-white border-l-4 border-purple-400 rounded-r-xl p-4">
-      <p class="font-semibold text-sm">วันที่ 7 | สตรอมสตัด → คาร์ลสตัด (8 ต.ค. | 5–11°C)</p>
-      <p class="text-xs text-subtle mt-1">🧥 เสื้อกันหนาว + แจ็คเก็ตกันลม / 👖 กางเกงขายาว / 🧣 ผ้าพันคอบาง / 👟 รองเท้าสบายสำหรับเดินชมเมือง</p>
+      <p class="font-semibold text-sm">วันที่ 7 | สตรอมสตัด → คาร์ลสตัด (8 ต.ค. | 5–12°C)</p>
+      <p class="text-xs text-subtle mt-1">🧥 เสื้อกันหนาว + แจ็คเก็ตกันลม / 👖 กางเกงขายาว / 🧣 ผ้าพันคอบาง / 👟 รองเท้าสบายสำหรับเดินชมเมือง / 💡 นั่งรถยาว 3 ชั่วโมงช่วงบ่าย เลือกชุดที่ไม่อึดอัด และคาร์ลสตัดเป็นเมืองตอนใน <strong>ค่ำคืนเย็นจัดกว่าชายฝั่ง</strong></p>
     </div>
     <div class="bg-white border-l-4 border-indigo-400 rounded-r-xl p-4">
-      <p class="font-semibold text-sm">วันที่ 8 | เออเรบลู → สตอกโฮล์ม (9 ต.ค. | 4–10°C)</p>
-      <p class="text-xs text-subtle mt-1">🍂 เสื้อแขนยาว + แจ็คเก็ตกันหนาว เหมาะถ่ายรูปใบไม้เปลี่ยนสี / 👖 กางเกงขายาว / 👟 รองเท้าสบายสำหรับเดินชมเมืองเก่า Gamla Stan</p>
+      <p class="font-semibold text-sm">วันที่ 8 | เออเรบลู → สตอกโฮล์ม (9 ต.ค. | 5–11°C)</p>
+      <p class="text-xs text-subtle mt-1">🍂 เสื้อแขนยาว + แจ็คเก็ตกันหนาว เหมาะถ่ายรูปใบไม้เปลี่ยนสี / 👖 กางเกงขายาว / 👟 รองเท้าสบายพื้นนุ่ม — เดินบนถนนหินปูในเมืองเก่า Gamla Stan / 🧣 ผ้าพันคอ ตอนเย็นในสตอกโฮล์มลมจากทะเลบอลติกเย็นเฉียบ</p>
     </div>
     <div class="bg-white border-l-4 border-brand-dark rounded-r-xl p-4">
-      <p class="font-semibold text-sm">วันที่ 9 | สตอกโฮล์ม → กรุงเทพฯ (10 ต.ค. | 4–10°C)</p>
-      <p class="text-xs text-subtle mt-1">👕 แต่งกายสบายสำหรับวันเดินทาง / 🧥 เสื้อคลุมบางขึ้นเครื่อง</p>
+      <p class="font-semibold text-sm">วันที่ 9 | สตอกโฮล์ม → กรุงเทพฯ (10 ต.ค. | 5–11°C)</p>
+      <p class="text-xs text-subtle mt-1">👕 แต่งกายสบายสำหรับวันเดินทาง / 🧥 เสื้อคลุมบางขึ้นเครื่อง / 💡 เก็บเสื้อกันหนาวหนาๆ ลงกระเป๋าโหลดได้ เพราะถึงกรุงเทพฯ เช้าวันรุ่งขึ้นอากาศร้อน</p>
     </div>
   </div>
 
@@ -1461,6 +1519,8 @@ Harbour) ตามความเชื่อในตำนานนอร์�
       <div class="flex items-center gap-2"><span>🧣</span> หมวกไหมพรม / ถุงมือกันหนาว</div>
       <div class="flex items-center gap-2"><span>👟</span> รองเท้าเดินป่ากันน้ำ พื้นเกาะถนน</div>
       <div class="flex items-center gap-2"><span>🕶️</span> แว่นกันแดด/กันลม สำหรับจุดชมวิวหน้าผา</div>
+      <div class="flex items-center gap-2"><span>🔥</span> แผ่นแปะร้อน (Heat pack) สำหรับวันเทรคกิ้ง</div>
+      <div class="flex items-center gap-2"><span>🧦</span> ถุงเท้าขนสัตว์ + ถุงเท้าสำรองใส่เป้</div>
     </div>
   </div>
 </section>
@@ -1494,11 +1554,9 @@ Harbour) ตามความเชื่อในตำนานนอร์�
        </style>
        <div class="rooms-grid mb-6">
 
-        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 1</span>
-        <span class="badge room-badge3"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Single Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#f59e0b,#d97706);">1</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MR. WERASAK SUTIPORNPALANGKUL</p><p class="text-xs text-gray-400">ผู้เดินทาง  </span><span class="badge dietary-badge"></i>🌶️ Spice mild</span> <span class="badge dietary-badge2"><i data-lucide="plane" style="width:12px;height:12px;"></i>กลับหลังคณะ 11 Oct</span></p></div></div></div>
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 1</span><span class="badge room-badge3"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Single Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#f59e0b,#d97706);">1</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MR. WERASAK SUTIPORNPALANGKUL</p><p class="text-xs text-gray-400">ผู้เดินทาง  </span><span class="badge dietary-badge"></i>🌶️ Spice mild</span> <span class="badge dietary-badge2"><i data-lucide="plane" style="width:12px;height:12px;"></i>กลับหลังคณะ 11 Oct</span></p></div></div></div>
 
-        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 2</span>
-        <span class="badge room-badge"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Twin Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#3b82f6,#1d4ed8);">2</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MISS SUKANDA RAKPANYA</p><p class="text-xs text-gray-400">ผู้เดินทาง</span><span class="badge dietary-badge2"><i data-lucide="plane" style="width:12px;height:12px;"></i>กลับหลังคณะ 11 Oct</span></p></div></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#ec4899,#be185d);">3</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MISS SUPITCHAYA RAKPANYA</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง</span><span class="badge dietary-badge"></i>🌶️ Spice mild</span><span class="badge dietary-badge2"><i data-lucide="plane" style="width:12px;height:12px;"></i>บินมาจาก LHR</span><span class="badge dietary-badge2"><i data-lucide="plane" style="width:12px;height:12px;"></i>กลับหลังคณะ 11 Oct</span></p><p class="text-xs text-gray-400">3OCT2026 SK500 LHR-CPH 06.40-09.30 </span></div></div></div></div>
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 2</span><span class="badge room-badge"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Twin Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#3b82f6,#1d4ed8);">2</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MISS SUKANDA RAKPANYA</p><p class="text-xs text-gray-400">ผู้เดินทาง</span><span class="badge dietary-badge2"><i data-lucide="plane" style="width:12px;height:12px;"></i>กลับหลังคณะ 11 Oct</span></p></div></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#ec4899,#be185d);">3</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MISS SUPITCHAYA RAKPANYA</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง</span><span class="badge dietary-badge"></i>🌶️ Spice mild</span><span class="badge dietary-badge2"><i data-lucide="plane" style="width:12px;height:12px;"></i>บินมาจาก LHR</span><span class="badge dietary-badge2"><i data-lucide="plane" style="width:12px;height:12px;"></i>กลับหลังคณะ 11 Oct</span></p><p class="text-xs text-gray-400">3OCT2026 SK500 LHR-CPH 06.40-09.30 </span></div></div></div></div>
 
         <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 3</span><span class="badge room-badge2"><i data-lucide="heart" style="width:12px;height:12px;"></i>Double Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#10b981,#047857);">4</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MR. WICHARN YINGSAKMONGKOL</p><p class="text-xs text-gray-400">ผู้เดินทาง</span><span class="badge dietary-badge2"><i data-lucide="plane" style="width:12px;height:12px;"></i>ไปก่อน - กลับหลังคณะ 2-11 OCT</span></p></div></div><div  class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#9933FF,#9900CC);">5</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MRS. SIVAPORN YINGSAKMONGKOL</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง  </span><span class="badge dietary-badge2"><i data-lucide="plane" style="width:12px;height:12px;"></i>ไปก่อน - กลับหลังคณะ 2-11 OCT</span></div></div></div></div>
 
@@ -1513,7 +1571,7 @@ Harbour) ตามความเชื่อในตำนานนอร์�
         <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-triple" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 8</span><span class="badge room-badge"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Triple Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#14b8a6, #0d9488);">16</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MR. WEERA CHAIYAMONGKOL</p><p class="text-xs text-gray-400">ผู้เดินทาง</span></p></div></div><div  class="guest-row"><div class="avatar" style="background:linear-gradient(135deg, #FFCC00, #FF3300);">17</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MRS. THARATIP CHAIYAMONGKOL</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง  </span></div></div></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#FFD700, #CD5C5C);">18</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MASTER PHUCHIS CHAIYAMONGKOL (14 Years)</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง</span></div></div></div></div>
 
         <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 9</span>
-        <span class="badge room-badge3"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Single Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#87CEFA,#00CED1);">19</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MR. ZAIDAN HAYEESAMA-AE</p><p class="text-xs text-gray-400">ผู้เดินทาง  </span><span class="badge dietary-badge2"><i data-lucide="plane" style="width:12px;height:12px;"></i>บินมาจาก Warsaw</span></p><p class="text-xs text-gray-400">3OCT2026 W6 1367 WAW-CPH 06.40-08.15 </span></div></div></div>
+        <span class="badge room-badge3"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Single Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#87CEFA,#00CED1);">19</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MR. ZAIDAN HAYEESAMA-AE</p><p class="text-xs text-gray-400">ผู้เดินทาง  </span><span class="badge dietary-badge"></i>حلال Halal</span><span class="badge dietary-badge2"><i data-lucide="plane" style="width:12px;height:12px;"></i>บินมาจาก Warsaw</span></p><p class="text-xs text-gray-400">3OCT2026 W6 1367 WAW-CPH 06.40-08.15 </span></div></div></div>
 
 <div class="room-card">
   <div class="flex flex-wrap items-center gap-2 mb-4">
@@ -1555,7 +1613,7 @@ Harbour) ตามความเชื่อในตำนานนอร์�
         <div class="flex items-center gap-2 text-green-300"><i data-lucide="users" style="width:16px;height:16px;"></i><span>ผู้เดินทางทั้งหมด <strong class="text-white">23</strong> ท่าน</span></div>
         <div class="flex items-center gap-2 text-blue-300"><i data-lucide="bed-double" style="width:16px;height:16px;"></i><span>ห้องพัก <strong class="text-white">12</strong> ห้อง (4SGL + 3DBL + 2TWN + 3TRP)</span></div>
         <div class="flex items-center gap-2 text-amber-300"><span>🌶️ Spice mild <strong class="text-white">4</strong> ท่าน</span></div>
-        <div class="flex items-center gap-2 text-red-300"><span>🥩 No beef <strong class="text-white">0</strong> ท่าน</span></div>
+        <div class="flex items-center gap-2 text-green-300"><span>حلال Halal <strong class="text-white">1</strong> ท่าน</span></div>
        </div>
       </div>
      </div>
