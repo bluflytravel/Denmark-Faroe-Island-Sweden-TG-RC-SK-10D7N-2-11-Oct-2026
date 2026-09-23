@@ -644,7 +644,7 @@ Harbour) ตามความเชื่อในตำนานนอร์�
           <p class="font-semibold">🍽️ รับประทานอาหารค่ำในโรงแรม </p>
           <div class="meal-card rounded-lg p-3 mt-2 text-xs">
            <p class="font-medium text-brand-dark mb-1">📋เมนู:</p>
-           <p>● Starter: French onion soup (Vegetarian)</p>        
+           <p>● Starter: French onion soup</p>        
            <p>● Main course: Mushroom risotto with oxtail </p>        
           <div class="img-slider">
             <div class="img-slider-track">
