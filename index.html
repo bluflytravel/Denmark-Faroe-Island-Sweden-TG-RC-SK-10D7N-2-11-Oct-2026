@@ -242,6 +242,14 @@ body { font-family: 'Prompt', sans-serif; }
   border-radius: 0.75rem;
   scrollbar-width: none;
 }
+.img-slider-track2 {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 0.75rem;
+  scrollbar-width: none;
+}
 .img-slider-track::-webkit-scrollbar { display: none; }
 .img-slide {
   flex: 0 0 100%;
@@ -588,7 +596,7 @@ body { font-family: 'Prompt', sans-serif; }
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร </p>
+          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน Smoked salmon sandwich</p>
            <div class="mt-3 flex gap-3">
            </div>
           </div>
@@ -633,7 +641,7 @@ Harbour) ตามความเชื่อในตำนานนอร์�
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร </p>
+          <p class="font-semibold">🍽️ รับประทานอาหารค่ำในโรงแรม </p>
            <div class="mt-3 flex gap-3">
            </div>
           </div>
@@ -641,7 +649,7 @@ Harbour) ตามความเชื่อในตำนานนอร์�
 
        </div>
        <div class="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-3 text-xs flex items-center gap-2">
-        <span>🏨</span> <strong>นำคณะเข้าสู่ที่พัก Hotel Brandan หรือเทียบเท่า ★★★★</strong>
+        <span>🏨</span> <strong>นำคณะเข้าสู่ที่พัก Hotel Brandan ★★★★</strong>
        </div>
       </div>
      </div><!-- /day-2 -->
@@ -684,11 +692,21 @@ Harbour) ตามความเชื่อในตำนานนอร์�
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร </p>
-           <div class="mt-3 flex gap-3">
-           </div>
-          </div>
-         </div>
+          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร Rose Café</p>
+          <div class="meal-card rounded-lg p-3 mt-2 text-xs">
+           <p class="font-medium text-brand-dark mb-1">📋เมนู:</p>
+           <p>Starter: Green salad; Main course: Fish and chips </p>        
+          <div class="img-slider">
+            <div class="img-slider-track">
+              <div class="img-slide"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnMOZs0s1Sg_aEZ_hmsYiy-RKjjc5vjV-2cvGlPN63T5HICC_4XKO1GTRbVmAq1FoaGo1m83mJCSp3MHYu6oduEDHY6JoIPtYAPdRm2RJLltj1D__OnAlLfVlEtmNXSBekd772_MwqYDKPN=s680-w680-h510-rw" loading="lazy" alt="Hida Takayama 1"></div>
+              <div class="img-slide"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkfYe7tuRfKngslGFagjBRQmuXJJgXPUe59iR_eA5Xui3mLciEaoaSPtvntLhVC2X4ZU-4C_Erl243fvUarnq9YDy9_NRDaDE3BUll0Hx5fcNRuYaeTaa-tG0QG0lbCaxvVsA0qMtjRFUc=s680-w680-h510-rw" loading="lazy" alt="Hida Takayama 2"></div>              
+            </div>
+            <div class="img-slider-dots"><span class="active"></span><span></span></div>
+            <div class="img-slider-counter">1/2</div>
+            </div><!-- /img-slider -->
+           </div><!-- /meal-card -->
+          </div><!-- /text-sm -->
+         </div><!-- /relative -->
 
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
@@ -724,15 +742,25 @@ Harbour) ตามความเชื่อในตำนานนอร์�
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร </p>
-           <div class="mt-3 flex gap-3">
-           </div>
-          </div>
-         </div>
+          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร Haps</p>
+          <div class="meal-card rounded-lg p-3 mt-2 text-xs">
+           <p class="font-medium text-brand-dark mb-1">📋เมนู:</p>
+           <p>Ribeye steak with salad, chips and sauce </p>        
+          <div class="img-slider">
+            <div class="img-slider-track">
+              <div class="img-slide"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkg0zyGAh2Et-7gO7brpnwDlU3t2IzSXieDk2WovYBrKvps-yrSM3LnmTpxWOhNvG7YssA6S6rHoXRuHLiRc5wAge_ibcyH42og0vJBfjvZZxVbfFMPskez4YEiGyqzrGOnpGID=s680-w680-h510-rw" loading="lazy" alt="Hida Takayama 1"></div>
+              <div class="img-slide"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm994g4xzEjD8eSTaHbnCna4nD5s47x1Bh4I_2w-0KDY1LzKUUal0VPuqSuusDPczIthruDqXx6ZWBdwV4IYMFevRTONHoSZs-8A1V87GBST9oiX72KYid5jPuYCgl6JhpGIcehiWS8NY-j=s680-w680-h510-rw" loading="lazy" alt="Hida Takayama 2"></div>              
+            </div>
+            <div class="img-slider-dots"><span class="active"></span><span></span></div>
+            <div class="img-slider-counter">1/2</div>
+            </div><!-- /img-slider -->
+           </div><!-- /meal-card -->
+          </div><!-- /text-sm -->
+         </div><!-- /relative -->
 
        </div>
        <div class="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-3 text-xs flex items-center gap-2">
-        <span>🏨</span> <strong>นำคณะเข้าสู่ที่พัก Hotel Brandan หรือเทียบเท่า ★★★★</strong>
+        <span>🏨</span> <strong>นำคณะเข้าสู่ที่พัก Hotel Brandan ★★★★</strong>
        </div>
       </div>
 
@@ -776,11 +804,21 @@ Harbour) ตามความเชื่อในตำนานนอร์�
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร </p>
-           <div class="mt-3 flex gap-3">
-           </div>
-          </div>
-         </div>
+          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร Aroidee Lighthouse</p>
+          <div class="meal-card rounded-lg p-3 mt-2 text-xs">
+           <p class="font-medium text-brand-dark mb-1">📋เมนู:</p>
+           <p>Starter: Tom yum soup; Main course: Thai basil stir-fried pork with rice </p>        
+          <div class="img-slider">
+            <div class="img-slider-track">
+              <div class="img-slide"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlGuQuG5I6028P_lkRrIPLHYgzTH-z4G7dSNjZXtm7rPxAyfXb317iexBWuZzt-5nXUMJ2GOe4TJ8-ZJw1Hd0-FD5EwVM6eJa3BeZFn2hg164G4Ta61s-hudCRk2jL_183vHtKq=s680-w680-h510-rw" loading="lazy" alt="Hida Takayama 1"></div>
+              <div class="img-slide"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlc-5PYNTg3CpFCNVoq-v_EL09Gt2yIsiRJ8bsc6RC9RnXqEkJw7KnTnaFVVicWIrGWocme4lRynvhJnh3rWbm69-UAcKaPcNHckpc3I2WqCkUZYOWvnw2wbKLB6jByXmlcQWzrkY4z7O3s=s680-w680-h510-rw" loading="lazy" alt="Hida Takayama 2"></div>              
+            </div>
+            <div class="img-slider-dots"><span class="active"></span><span></span></div>
+            <div class="img-slider-counter">1/2</div>
+            </div><!-- /img-slider -->
+           </div><!-- /meal-card -->
+          </div><!-- /text-sm -->
+         </div><!-- /relative -->
 
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
@@ -816,15 +854,17 @@ Harbour) ตามความเชื่อในตำนานนอร์�
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร </p>
-           <div class="mt-3 flex gap-3">
-           </div>
-          </div>
-         </div>
+          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร Hotel Hilton </p>
+          <div class="meal-card rounded-lg p-3 mt-2 text-xs">
+           <p class="font-medium text-brand-dark mb-1">📋เมนู:</p>
+           <p>Starter: Marinated scallops; Main course: Salmon </p>        
+           </div><!-- /meal-card -->
+          </div><!-- /text-sm -->
+         </div><!-- /relative -->
 
        </div>
        <div class="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-3 text-xs flex items-center gap-2">
-        <span>🏨</span> <strong>นำคณะเข้าสู่ที่พัก Hotel Brandan หรือเทียบเท่า ★★★★</strong>
+        <span>🏨</span> <strong>นำคณะเข้าสู่ที่พัก Hotel Brandan ★★★★</strong>
        </div>
       </div>
      </div><!-- /day-4 -->
@@ -884,7 +924,7 @@ Harbour) ตามความเชื่อในตำนานนอร์�
 
        </div>
        <div class="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-3 text-xs flex items-center gap-2">
-        <span>🏨</span> <strong>นำคณะเข้าสู่ที่พัก Radisson Blu Riverside Hotel หรือเทียบเท่า ★★★★</strong>
+        <span>🏨</span> <strong>นำคณะเข้าสู่ที่พัก Radisson Blu Riverside Hotel ★★★★</strong>
        </div>
       </div>
      </div><!-- /day-5 -->
@@ -927,11 +967,21 @@ Harbour) ตามความเชื่อในตำนานนอร์�
       <div class="relative">
         <div class="timeline-dot absolute -left-[31px] top-1"></div>
         <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร</p>
-          <div class="mt-3 flex gap-3">
-          </div>
-        </div>
-      </div>
+          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร RESTAURANT BARRIQUE RESTAURANT</p>
+          <div class="meal-card rounded-lg p-3 mt-2 text-xs">
+           <p class="font-medium text-brand-dark mb-1">📋เมนู:</p>
+           <p>Salad buffet, Oven-baked fish fillet, roe butter sauce, duchess potatoes, broccoli, Dessert of the day</p>        
+          <div class="img-slider">
+            <div class="img-slider-track">
+              <div class="img-slide"><img src="https://www.gp.se/images/og/73815e7b-5cc2-482e-8897-020d9299f5d4/images/9lajzwm2H3tzWA120_v2TrhN16fs.jpg?width=1200&quality=75" loading="lazy" alt="Hida Takayama 1"></div>
+              <div class="img-slide"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmKnjULdhXOiiVKP5TGgMvh43XTx6HoI_NYpgAtFZh3T3B2Wpp9tFfeLnBNcEc79b1dYGSTOGKLYLJznqVV1upDIb76-xpANHo8DS9nR5fYmAjfth97AYES2ZumgGK-h2k9348U=s680-w680-h510-rw" loading="lazy" alt="Hida Takayama 2"></div>              
+            </div>
+            <div class="img-slider-dots"><span class="active"></span><span></span></div>
+            <div class="img-slider-counter">1/2</div>
+            </div><!-- /img-slider -->
+           </div><!-- /meal-card -->
+          </div><!-- /text-sm -->
+         </div><!-- /relative -->
 
       <div class="relative">
         <div class="timeline-dot absolute -left-[31px] top-1"></div>
@@ -958,7 +1008,7 @@ Harbour) ตามความเชื่อในตำนานนอร์�
       <div class="relative">
         <div class="timeline-dot absolute -left-[31px] top-1"></div>
         <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร</p>
+          <p class="font-semibold">🍽️ รับประทานอาหารค่ำในโรงแรม</p>
             <div class="mt-3 flex gap-3">
           </div>
         </div>
@@ -966,7 +1016,7 @@ Harbour) ตามความเชื่อในตำนานนอร์�
 
     </div>
     <div class="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-3 text-xs flex items-center gap-2">
-      <span>🏨</span> <strong>นำคณะเข้าสู่ที่พัก Vann Spa Hotell & Konferens หรือเทียบเท่า ★★★★</strong>
+      <span>🏨</span> <strong>นำคณะเข้าสู่ที่พัก Vann Spa Hotel & Konferens ★★★★</strong>
     </div>
   </div>
 </div><!-- /day-6 -->
@@ -1019,11 +1069,21 @@ Harbour) ตามความเชื่อในตำนานนอร์�
       <div class="relative">
         <div class="timeline-dot absolute -left-[31px] top-1"></div>
         <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร</p>
-          <div class="mt-3 flex gap-3">
-          </div>
-        </div>
-      </div>
+          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร RESTAURANT SCANDIC LAHOLMEN (BUFFET)</p>
+          <div class="meal-card rounded-lg p-3 mt-2 text-xs">
+           <p class="font-medium text-brand-dark mb-1">📋เมนู:</p>
+           <p>Fresh salads, soup of the day, Two different hot dishes, with a vegetarian alternative to fish or meat, Bread with butter, Dessert and coffee</p>        
+          <div class="img-slider">
+            <div class="img-slider-track">
+              <div class="img-slide"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnl9KY13KmYB3AxzmKEp6k8wFDJwFk6Asqy8nZUMnwMzdfojR8W19aaFH1n3r6AUE9gqhHvsrKlKflBS34_uUcvAEZdks9R539ZubF5-SQzqRnabedO9ckiAwHZp5kF-jIAE2sLUA=s680-w680-h510-rw" loading="lazy" alt="Hida Takayama 1"></div>
+              <div class="img-slide"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnaJ-u3bCRwIPUlj8vEl3d0nxnp4XlaKc3AN0ltvVp9qVX9rTVufp6o8QuSvH87-iIFBoK1QIbbxJQGJ7zbX8sTHxe2YE8K5fwaBacPPbAQoXP-LreZuq4Ef-8YsPQEXHxllAcq=s680-w680-h510-rw" loading="lazy" alt="Hida Takayama 2"></div>              
+            </div>
+            <div class="img-slider-dots"><span class="active"></span><span></span></div>
+            <div class="img-slider-counter">1/2</div>
+            </div><!-- /img-slider -->
+           </div><!-- /meal-card -->
+          </div><!-- /text-sm -->
+         </div><!-- /relative -->
 
       <div class="relative">
         <div class="timeline-dot absolute -left-[31px] top-1"></div>
@@ -1050,7 +1110,7 @@ Harbour) ตามความเชื่อในตำนานนอร์�
       <div class="relative">
         <div class="timeline-dot absolute -left-[31px] top-1"></div>
         <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร</p>
+          <p class="font-semibold">🍽️ รับประทานอาหารค่ำในโรงแรม</p>
             <div class="mt-3 flex gap-3">
           </div>
         </div>
@@ -1058,7 +1118,7 @@ Harbour) ตามความเชื่อในตำนานนอร์�
 
     </div>
     <div class="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-3 text-xs flex items-center gap-2">
-      <span>🏨</span> <strong>นำคณะเข้าสู่ที่พัก Scandic Karlstad City หรือเทียบเท่า ★★★★</strong>
+      <span>🏨</span> <strong>นำคณะเข้าสู่ที่พัก Scandic Karlstad City ★★★★</strong>
     </div>
   </div>
 </div><!-- /day-7 -->
@@ -1117,11 +1177,21 @@ Harbour) ตามความเชื่อในตำนานนอร์�
       <div class="relative">
         <div class="timeline-dot absolute -left-[31px] top-1"></div>
         <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร</p>
-          <div class="mt-3 flex gap-3">
-          </div>
-        </div>
-      </div>
+          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร FORMOSA RESTAURANT</p>
+          <div class="meal-card rounded-lg p-3 mt-2 text-xs">
+           <p class="font-medium text-brand-dark mb-1">📋เมนู:</p>
+           <p>Pickled cod with soup, Steamed halibut, Pack garlic lobster, Salt and pepper prawns, Steamed garlic scallop, Fried fresh vegetables, Garlic crab </p>        
+          <div class="img-slider">
+            <div class="img-slider-track">
+              <div class="img-slide"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmnkB_zuiBVmc5DERICHsERCa7TEh1kneiCrutrJ_8ycAJDlBFfawOYKdBuAmohJmdbH2hDEHiuz2uNGhC2sDsW7BOJQQJUV-kMh4ex_LC9c58NubmOBa26yfpLn9WNh7BIZk43XQ=s680-w680-h510-rw" loading="lazy" alt="Hida Takayama 1"></div>
+              <div class="img-slide"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlzQ2PZx0TaN1riCTySaTf9LVlVKHINSqcppIektFWFSM8ewu38JmnEpXJP_xI-jBin0J05v8ijdBvZGV_XYDunUyFNALXYeJCAMoiISkti4-_solmmt_i30ZLUrApisPRloTNj=s680-w680-h510-rw" loading="lazy" alt="Hida Takayama 2"></div>              
+            </div>
+            <div class="img-slider-dots"><span class="active"></span><span></span></div>
+            <div class="img-slider-counter">1/2</div>
+            </div><!-- /img-slider -->
+           </div><!-- /meal-card -->
+          </div><!-- /text-sm -->
+         </div><!-- /relative -->
 
       <div class="relative">
         <div class="timeline-dot absolute -left-[31px] top-1"></div>
@@ -1153,15 +1223,28 @@ Harbour) ตามความเชื่อในตำนานนอร์�
       <div class="relative">
         <div class="timeline-dot absolute -left-[31px] top-1"></div>
         <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร</p>
-            <div class="mt-3 flex gap-3">
-          </div>
-        </div>
-      </div>
+          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร Restaurant Grill </p>
+          <div class="meal-card rounded-lg p-3 mt-2 text-xs">
+           <p class="font-medium text-brand-dark mb-1">📋เมนู:</p>
+           <p>● BLEAK ROE On wonton with red onion and lemon cream </p>        
+           <p>● GRILL’S TOAST SKAGEN Grilled bread, hand-peeled prawns</p>        
+           <p>● STRIPLOIN Grain Fed 250 g, with béarnaise, red wine jus, spring vegetables and fries (served medium)</p>        
+           <p>● CHOCOLATE FONDANT With white chocolate ice cream and sweetened fresh raspberries </p>        
+          <div class="img-slider">
+            <div class="img-slider-track">
+              <div class="img-slide"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlbnjDc7KfGlfr-QX-w7AcJqvYRUpTh2VEBoWucUIotBICBjIpZeJXr1WBh2Ss4ky5zTF3eqQHfLeHqOAbsQg6qd60jnNQUSa56YS62gQrJkp0gpuizs8v458oGbjtuVzQuJSSj=s680-w680-h510-rw" loading="lazy" alt="Hida Takayama 1"></div>
+              <div class="img-slide"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkBGISJkCWzgC5N2jH3LvIGGum6PQkqPOMYTLtQiRLnovq47OrlsEE6IkrLhEwuBNKrcnlff7Vpzrh2A8OwgUvNVt4asuCNaARSSgBMJK_8r7iknaPGQEmtKnZkher5OauW0hFhhA=s680-w680-h510-rw" loading="lazy" alt="Hida Takayama 2"></div>              
+            </div>
+            <div class="img-slider-dots"><span class="active"></span><span></span></div>
+            <div class="img-slider-counter">1/2</div>
+            </div><!-- /img-slider -->
+           </div><!-- /meal-card -->
+          </div><!-- /text-sm -->
+         </div><!-- /relative -->
 
     </div>
     <div class="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-3 text-xs flex items-center gap-2">
-      <span>🏨</span> <strong>นำคณะเข้าสู่ที่พัก Radisson Blu Royal Viking Hotel หรือเทียบเท่า ★★★★</strong>
+      <span>🏨</span> <strong>นำคณะเข้าสู่ที่พัก Radisson Blu Royal Viking Hotel ★★★★</strong>
     </div>
   </div>
 </div><!-- /day-8 -->
@@ -1562,7 +1645,7 @@ Harbour) ตามความเชื่อในตำนานนอร์�
 
         <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 4</span><span class="badge room-badge2"><i data-lucide="heart" style="width:12px;height:12px;"></i>Double Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#FFCC00, #FF3300);">6</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MR. THEERA CHUEABOONCHAI</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง</span></div></div></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#14b8a6, #0d9488);">7</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MISS PLOYKANOK CHUEABOONCHAI</p><p class="text-xs text-gray-400">ผู้เดินทาง</p></div></div></div>
 
-        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 5</span><span class="badge room-badge2"><i data-lucide="heart" style="width:12px;height:12px;"></i>Double Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#ec4899, #be185d);">8</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MR. GUN KEOROCHANA</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง</span></div></div></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#8b5cf6, #6d28d9);">9</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MRS. NARUMON KEOROCHANA</p><p class="text-xs text-gray-400">ผู้เดินทาง</p></div></div></div>
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 5</span><span class="badge room-badge2"><i data-lucide="heart" style="width:12px;height:12px;"></i>Double Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#ec4899, #be185d);">8</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MR. GUN KEOROCHANA</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง</span></div></div></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#8b5cf6, #6d28d9);">9</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MRS. NARUMON KEOROCHANA</p><p class="text-xs text-gray-400">ผู้เดินทาง</p><span class="badge dietary-badge"></i>🥩 ไม่ทานเนื้อวัว</span></div></div></div>
 
         <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-triple" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 6</span><span class="badge room-badge"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Triple Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#3b82f6, #1d4ed8);">10</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MR. TEWAJETSADA PARUANG</p><p class="text-xs text-gray-400">ผู้เดินทาง</span><span class="badge dietary-badge"></i>🌶️ SPICE MILD</span></p></div></div><div  class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#87CEFA,#00CED1);">11</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MRS. TAKSAORN UBOL</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง  </span></div></div></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#FFCCFF,#FF33FF);">12</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MISS PIMYADA UBOL  ( 7 Years)</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง</span><span class="badge dietary-badge"></i>🌶️ SPICE MILD</span></div></div></div></div>
 
@@ -1614,6 +1697,7 @@ Harbour) ตามความเชื่อในตำนานนอร์�
         <div class="flex items-center gap-2 text-blue-300"><i data-lucide="bed-double" style="width:16px;height:16px;"></i><span>ห้องพัก <strong class="text-white">12</strong> ห้อง (4SGL + 3DBL + 2TWN + 3TRP)</span></div>
         <div class="flex items-center gap-2 text-amber-300"><span>🌶️ Spice mild <strong class="text-white">4</strong> ท่าน</span></div>
         <div class="flex items-center gap-2 text-green-300"><span>حلال Halal <strong class="text-white">1</strong> ท่าน</span></div>
+        <div class="flex items-center gap-2 text-red-300"><span>🥩 ไม่ทานเนื้อวัว <strong class="text-white">1</strong> ท่าน</span></div>
        </div>
       </div>
      </div>
@@ -1644,30 +1728,57 @@ function showDay(n) {
   if (dayEl) { dayEl.style.display = 'block'; dayEl.classList.remove('fade-in'); void dayEl.offsetWidth; dayEl.classList.add('fade-in'); }
   document.querySelectorAll('.day-tab')[n - 1]?.classList.add('active-day');
 }
-
-// ===== Image slider (swipe carousel) =====
+// Initialize swipeable image sliders: sync dots + counter on scroll,
+// and expose a scrollBySlide() helper for future prev/next controls.
 function initImgSliders(root) {
-  (root || document).querySelectorAll('.img-slider').forEach(slider => {
-    if (slider.dataset.sliderInit) return;
+  const sliders = (root || document).querySelectorAll('.img-slider');
+  sliders.forEach(slider => {
+    if (slider.dataset.sliderInit) return; // avoid double-binding
     slider.dataset.sliderInit = '1';
+
     const track = slider.querySelector('.img-slider-track');
     const dots = slider.querySelectorAll('.img-slider-dots span');
     const counter = slider.querySelector('.img-slider-counter');
-    const total = slider.querySelectorAll('.img-slide').length;
+    const slideCount = slider.querySelectorAll('.img-slide').length;
+    if (!track || slideCount === 0) return;
+
     let ticking = false;
+    const updateActive = () => {
+      const slideWidth = track.clientWidth || 1;
+      const idx = Math.round(track.scrollLeft / slideWidth);
+      const clamped = Math.max(0, Math.min(idx, slideCount - 1));
+      dots.forEach((dot, i) => dot.classList.toggle('active', i === clamped));
+      if (counter) counter.textContent = (clamped + 1) + '/' + slideCount;
+      ticking = false;
+    };
+
     track.addEventListener('scroll', () => {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(() => {
-        const idx = Math.round(track.scrollLeft / track.clientWidth);
-        dots.forEach((d, i) => d.classList.toggle('active', i === idx));
-        if (counter) counter.textContent = (idx + 1) + '/' + total;
-        ticking = false;
-      });
+      if (!ticking) {
+        window.requestAnimationFrame(updateActive);
+        ticking = true;
+      }
     }, { passive: true });
+
+    // Tapping a dot jumps to that slide
+    dots.forEach((dot, i) => {
+      dot.style.pointerEvents = 'auto';
+      dot.style.cursor = 'pointer';
+      dot.addEventListener('click', () => {
+        track.scrollTo({ left: i * track.clientWidth, behavior: 'smooth' });
+      });
+    });
+
+    // Keep the correct slide in view on resize/orientation change
+    window.addEventListener('resize', () => {
+      const idx = Math.round(track.scrollLeft / (track.clientWidth || 1));
+      track.scrollTo({ left: idx * track.clientWidth, behavior: 'auto' });
+    });
+
+    updateActive();
   });
 }
-initImgSliders();
+
+document.addEventListener('DOMContentLoaded', () => initImgSliders(document));
 
 const defaultConfig = {
   main_title: 'SPAIN EXPLORER',
