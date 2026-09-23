@@ -642,10 +642,21 @@ Harbour) ตามความเชื่อในตำนานนอร์�
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
           <p class="font-semibold">🍽️ รับประทานอาหารค่ำในโรงแรม </p>
-           <div class="mt-3 flex gap-3">
-           </div>
-          </div>
-         </div>
+          <div class="meal-card rounded-lg p-3 mt-2 text-xs">
+           <p class="font-medium text-brand-dark mb-1">📋เมนู:</p>
+           <p>● Starter: French onion soup (Vegetarian)</p>        
+           <p>● Main course: Mushroom risotto with oxtail </p>        
+          <div class="img-slider">
+            <div class="img-slider-track">
+              <div class="img-slide"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWliykIDrjynTr5rni2tmztWG2ZmpYNlEXHfQWhODeHIWM1W6jRwPYdLJqupF3Om57I-HgjZmDlXxqaXBCI-3oeVpfMITb8er9xpue7-Us86uOi2SvFEqYWvvUZXDeHHjvEgZK9f0w=s680-w680-h510-rw" loading="lazy" alt="Hida Takayama 1"></div>
+              <div class="img-slide"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmRbPcUBqUrE0jzwTUbCskALeqkr1CzQco4OMvWmKdiwZgeVso3LH9A-Smlvrk4AS8herheRINi-ImvqSrlS-BxQ0nwQ5ZLsDtaLmo4u0Pp3VR0zETcayCrSX3oD29w9OfxIOI=s680-w680-h510-rw" loading="lazy" alt="Hida Takayama 2"></div>              
+            </div>
+            <div class="img-slider-dots"><span class="active"></span><span></span></div>
+            <div class="img-slider-counter">1/2</div>
+            </div><!-- /img-slider -->
+           </div><!-- /meal-card -->
+          </div><!-- /text-sm -->
+         </div><!-- /relative -->
 
        </div>
        <div class="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-3 text-xs flex items-center gap-2">
