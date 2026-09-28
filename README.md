@@ -338,7 +338,7 @@ body { font-family: 'Prompt', sans-serif; }
     <section id="sec-flights" class="tab-section active fade-in">
      <h2 class="font-display text-2xl md:text-3xl font-bold text-brand-dark mb-6">✈️ ข้อมูลเที่ยวบิน</h2>
      <div class="bg-amber-50 border border-amber-200 rounded-2xl p-5 mb-6">
-      <h4 class="font-semibold text-amber-800 mb-3">🧳 ข้อมูลน้ำหนักกระเป๋า</h4>
+      <h4 class="font-semibold text-amber-800 mb-3">🧳 ข้อมูลน้ำหนักกระเป๋า (Thai Airways)</h4>
       <div class="grid md:grid-cols-2 gap-4 text-sm">
        <div>
         <p class="font-semibold text-amber-900 mb-2">✈️ Business Class</p>
@@ -351,6 +351,32 @@ body { font-family: 'Prompt', sans-serif; }
         <p class="font-semibold text-amber-900 mb-2">✈️ Economy Class</p>
         <ul class="text-amber-700 space-y-1 text-xs">
          <li>• Carry on: 1 ใบ × 7 kg.</li>
+         <li>• Checked bag: 1 ใบ × 23 kg</li>
+        </ul>
+       </div>
+      </div>
+     </div>
+
+     <div class="bg-amber-50 border border-amber-200 rounded-2xl p-5 mb-6">
+      <h4 class="font-semibold text-amber-800 mb-3">🧳 ข้อมูลน้ำหนักกระเป๋า (Atlantic Airways)</h4>
+      <div class="grid md:grid-cols-2 gap-4 text-sm">
+       <div>
+        <p class="font-semibold text-amber-900 mb-2">✈️ Economy Class</p>
+        <ul class="text-amber-700 space-y-1 text-xs">
+         <li>• Carry on: 1 ใบ × 8 kg.</li>
+         <li>• Checked bag: 1 ใบ × 23 kg</li>
+        </ul>
+       </div>
+      </div>
+     </div>
+
+     <div class="bg-amber-50 border border-amber-200 rounded-2xl p-5 mb-6">
+      <h4 class="font-semibold text-amber-800 mb-3">🧳 ข้อมูลน้ำหนักกระเป๋า (Scandinavian Airlines)</h4>
+      <div class="grid md:grid-cols-2 gap-4 text-sm">
+       <div>
+        <p class="font-semibold text-amber-900 mb-2">✈️ Economy Class</p>
+        <ul class="text-amber-700 space-y-1 text-xs">
+         <li>• Carry on: 1 ใบ × 8 kg.</li>
          <li>• Checked bag: 1 ใบ × 23 kg</li>
         </ul>
        </div>
